@@ -1,0 +1,15 @@
+/* components/SplitLine/index.wxss */
+.container {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.split-line {
+  width: 90%;
+  border-style: solid;
+  border-color: #eeeeee;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+}

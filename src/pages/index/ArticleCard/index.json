@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "CircleContainer": "../../components/CircleContainer/index"
+  },
+  "component": true
+}

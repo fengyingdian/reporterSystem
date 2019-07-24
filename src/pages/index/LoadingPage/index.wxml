@@ -1,0 +1,7 @@
+<!-- components/ArticleCardE/index.wxml -->
+<view class="container {{hide}}">
+  <view class="loading-box">
+    <image class="loading" src="/assets/icons/loading.gif" />
+    <image class="title" src="/assets/icons/appName.png" />
+  </view>
+</view>

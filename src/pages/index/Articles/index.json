@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "LoadingSmall": "../../components/LoadingSmall/index",
+    "ArticleCardE": "../../components/ArticleCardE/index"
+  }
+}

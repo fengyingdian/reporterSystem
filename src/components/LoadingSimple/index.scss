@@ -1,0 +1,60 @@
+/* components/toptab/index.wxss */
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .name {
+    font-size: 50rpx;
+    font-weight: 900;
+    color: rgb(190, 187, 187);
+    margin: 20rpx;
+  }
+  .description {
+    font-size: 32rpx;
+    color: rgb(211, 206, 206);
+  }
+}
+.black {
+  position: absolute;
+  left: 325rpx;
+  top: 325rpx;
+  z-index: 1;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+  background-color: rgb(83, 51, 51);
+  animation-name: black;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.red {
+  position: absolute;
+  left: 375rpx;
+  top: 375rpx;
+  z-index: 2;
+  height: 0rpx;
+  width: 0rpx;
+  border-radius: 50rpx;
+  background-color: rgb(221, 35, 36);
+  animation-name: red;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Standard syntax */
+@keyframes red {
+  0% {
+  }
+  50% {
+    width: 60rpx;
+    height: 60rpx;
+    left: 345rpx;
+    top: 345rpx;
+    z-index: 1;
+  }
+  100% {
+  }
+}

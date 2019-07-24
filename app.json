@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "dist/pages/index/index",
+    "dist/pages/vcomment/index",
+    "dist/pages/webview/index",
+    "dist/pages/profile/index",
+    "dist/pages/influencer/index",
+    "dist/pages/circle/index",
+    "dist/pages/launchComment/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "红板报",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationStyle": "custom"
+  },
+  "cloud": true
+}

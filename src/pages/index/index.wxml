@@ -1,0 +1,53 @@
+<LoadingPage
+  wx:if="{{attachLoadingPage}}"
+  show="{{showLoadingPage}}"/>
+<LaunchingPage
+  wx:if="{{showLaunchingPage}}"
+  show="{{showLaunchingPage}}"/>
+<TopBar />
+<view
+  class='container'>
+  <view class="topHider" style="height:{{marginTop}}px;"/>
+  <block wx:for="{{articles}}" wx:for-item="data">
+    <block wx:for="{{data}}" wx:for-item="item">
+      <block wx:if="{{item.prime}}">
+        <ArticleCardWithPrime
+          index="{{index}}"
+          data="{{item}}"
+          bindarticle="tapArticle" />
+      </block>
+      <block wx:else>
+        <ArticleCard
+          index="{{index}}"
+          data="{{item}}"
+          gyro="{{gyro}}"
+          bindarticle="tapArticle" />
+      </block>
+    </block>
+  </block>
+  <view wx:if="{{fetchedAll}}" class="tips">{{bottomTips}}</view>
+  <view hidden="{{fetchedAll}}" class="bottom">
+    <LoadingSmall />
+  </view>
+  <!--swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    circular="{{circular}}"
+    vertical="{{vertical}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    previous-margin="{{previousMargin}}px"
+    next-margin="{{nextMargin}}px"
+    easing-function="easeInOutCubic"
+    current="{{titleSelected}}"
+    class="page-container"
+    style="height:{{swiperHeight}}px;"
+    bindchange="bindchange">
+    <swiper-item>
+      <Articles pageHeight="{{swiperHeight}}"/>
+    </swiper-item>
+    <swiper-item>
+      <Collections pageHeight="{{swiperHeight}}"/>
+    </swiper-item>
+  </swiper-->
+</view>

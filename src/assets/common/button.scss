@@ -1,0 +1,23 @@
+
+// !according to official document
+// !https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html
+// !the button {} should not work in a component
+// !but it works here
+button {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  text-align:center;
+  text-decoration:none;
+  line-height: 1;
+  border-radius: 0;
+  -webkit-tap-highlight-color:transparent;
+  overflow: hidden;
+  color:#000000;
+  background-color: transparent;
+}

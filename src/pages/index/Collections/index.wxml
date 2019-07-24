@@ -1,0 +1,15 @@
+<!-- pages/index/index.wxml -->
+<scroll-view class="scroll-view" scroll-y="true" style="height:{{pageHeight}}px">
+  <view class="scroll-area" style="{{loadStatus ? 'background: #fff' : ''}}">
+    <!--block wx:for="{{articles}}" wx:for-item="data">
+      <block wx:for="{{data}}" wx:for-item="item">
+        <ArticleCardD data="{{item}}" bindarticle="tapArticle" />
+      </block>
+    </block>
+    <view wx:if="{{fetchedAll}}" class="tips">{{bottomTips}}</view>
+    <view hidden="{{fetchedAll}}" class="bottom">
+      <LoadingSmall />
+    </view-->
+    <text style="margin-top:30vh;color:#444;font-size:28rpx;"> - 暂无 - </text>
+  </view>
+</scroll-view>

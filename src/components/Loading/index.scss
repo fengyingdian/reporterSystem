@@ -1,0 +1,23 @@
+@import '../../assets/company/logo.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .name {
+    font-size: 50rpx;
+    font-weight: 900;
+    color: rgb(190, 187, 187);
+    margin: 20rpx;
+  }
+  .description {
+    font-size: 32rpx;
+    color: rgb(211, 206, 206);
+  }
+}
