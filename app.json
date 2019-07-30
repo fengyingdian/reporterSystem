@@ -1,12 +1,6 @@
 {
   "pages": [
-    "dist/pages/index/index",
-    "dist/pages/vcomment/index",
-    "dist/pages/webview/index",
-    "dist/pages/profile/index",
-    "dist/pages/influencer/index",
-    "dist/pages/circle/index",
-    "dist/pages/launchComment/index"
+    "dist/pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

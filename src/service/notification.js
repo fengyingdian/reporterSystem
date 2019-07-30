@@ -1,6 +1,6 @@
 /*
  * File: notification.js
- * Project: flimi
+ * Project: Flime
  * File Created: Tuesday, 30th April 2019 10:13:51 am
  * Author: break (fengyingdian@126.com)
  */
@@ -27,7 +27,7 @@ const wxPromisify = wxCPSFunction => opts => new Promise((resolve, reject) => wx
 }));
 
 function wxRequest({ url, method = 'GET', data = {} }) {
-  Flimi.AppBase().logManager.log(method, url);
+  console.log(method, url);
   return wxPromisify(wx.request)({
     url,
     method,

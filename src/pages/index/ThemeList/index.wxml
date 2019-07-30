@@ -1,0 +1,9 @@
+<scroll-view scroll-y class="container">
+  <block wx:for="{{themeList}}" wx:for-index="index" wx:for-item="item">
+    <view
+      wx:key="{{item.id}}"
+      class="item {{index === currentTheme ? 'selected' : ''}}"
+      catch:tap="tapTheme"
+      data-index="{{index}}"> {{item.name}} </view>
+  </block>
+</scroll-view>

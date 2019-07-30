@@ -1,9 +1,8 @@
 // pages/index/index.js
 Component({
   properties: {
-    title: String,
-    cover: String,
-    excerpt: String,
+    themeList: Array,
+    currentTheme: Number,
   },
 
   data: {},
@@ -23,5 +22,11 @@ Component({
     resize() {},
   },
 
-  methods: {},
+  methods: {
+    tapTheme(opts) {
+      this.setData({
+        currentTheme: opts.currentTarget.dataset.index,
+      });
+    },
+  },
 });

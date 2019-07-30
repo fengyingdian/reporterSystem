@@ -1,6 +1,6 @@
 /*
  * File: wxpromisify.js
- * Project: flimi
+ * Project: Flime
  * File Created: Wednesday, 5th June 2019 5:15:25 pm
  * Author: break (fengyingdian@126.com)
  */

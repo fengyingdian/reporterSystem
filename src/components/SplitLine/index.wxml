@@ -1,4 +1,0 @@
-<!--components/SplitLine/index.wxml-->
-<view class="container">
-  <view class='split-line'></view>
-</view>

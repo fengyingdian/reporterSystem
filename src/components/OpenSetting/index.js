@@ -16,7 +16,6 @@ Component({
   methods: {
     tapOpenSetting() {
       wx.openSetting();
-      // Flimi.AppBase().logManager.log('openSetting', e);
       this.triggerEvent('openSetting', {}, {});
     },
   },

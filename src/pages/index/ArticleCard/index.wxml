@@ -1,47 +1,8 @@
-<!-- components/ArticleCardE/index.wxml -->
-<view class="container">
-  <CircleContainer article="{{data}}" />
-  <block wx:if="{{data.influencer}}">
-    <view class="user">
-      <view class="avatar-container">
-        <form catchsubmit="onInfluencer">
-          <button form-type="submit" hover-class="none">
-            <view class="avatar-box">
-              <image class='avatar' mode='aspectFill' src='{{data.influencer.avatar}}'/>
-              <image class='brand' mode='aspectFill' src='/assets/icons/brand.png'/>
-            </view>
-          </button>
-        </form>
-        <form catchsubmit="onArticle" data-flUrl="{{data.fl_url}}" report-submit="true">
-          <button form-type="submit" hover-class="none">
-            <view class="profile">
-              <view class="title-box">
-                <text class='name'>{{data.influencer.nickname}}</text>
-                <text class='desc'>{{data.influencer.description}}</text>
-              </view>
-              <text class="comment">{{data.influencer.comment}}</text>
-            </view>
-          </button>
-        </form>
-      </view>
-    </view>
-  </block>
-  <form catchsubmit="onArticle" data-flUrl="{{data.fl_url}}" report-submit="true">
-    <button form-type="submit" hover-class="none">
-      <view class="image-box">
-        <image
-          class="image"
-          style="top:{{top}}rpx;left:{{left}}rpx;transition: all .2s"
-          mode="aspectFill"
-          src="{{cover}}"
-          binderror="onCoverError"
-          bindload="onCoverLoad"/>
-        <view class="mask {{maskHide}}" />
-      </view>
-      <text class="title">{{data.title}}</text>
-      <text class="publisher" wx:if="{{data.commentCount>1}}">{{data.publisherDisplayName}} {{data.commentCount}}评论</text>
-      <text class="publisher" wx:else>{{data.publisherDisplayName}}</text>
-    </button>
-  </form>
+<view class="container col">
+  <image
+    class="image image-show"
+    mode="aspectFill"
+    src="{{cover}}"
+    binderror="onCoverError"
+    bindload="onCoverLoad"/>
 </view>
-

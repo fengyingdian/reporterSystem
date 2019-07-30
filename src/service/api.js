@@ -4,7 +4,7 @@
  * Author: Break <fengyingdian@126.com>
  */
 
-export const platform = 'p';
+export const platform = 's';
 
 export const HOST = (() => {
   if (platform === 's') {
@@ -27,7 +27,7 @@ const wxPromisify = wxCPSFunction => opts => new Promise((resolve, reject) => wx
 }));
 
 const wxRequest = ({ url, method = 'GET', data = {} }) => {
-  Flimi.AppBase().logManager.log(method, url, data);
+  console.log(method, url, data);
   return wxPromisify(wx.request)({
     url,
     method,
@@ -38,8 +38,9 @@ const wxRequest = ({ url, method = 'GET', data = {} }) => {
   });
 };
 
+// eslint-disable-next-line
 const wxRequestWithAuthorization = ({ url, method = 'GET', data = {} }) => {
-  Flimi.AppBase().logManager.log(method, url, data);
+  console.log(method, url, data);
   const token = (() => {
     const { userInfo } = getApp().globalData;
     if (userInfo) {
@@ -101,25 +102,24 @@ const login = (code, encryptedData, iv) => wxRequest({
   method: 'POST',
 });
 
+/**
+ * home feed
+ */
+const fetchActivitiesSmart = (pageKey, perPage) => wxRequestWithAuthorization({
+  url: `${HOST}/api/app/activities/feed/home`,
+  data: {
+    page_key: pageKey,
+    per_page: perPage,
+  },
+});
+
 module.exports = {
   wxPromisify,
-
-  fetchCircleSmart,
-  fetchActivitiesSmart,
-  fetchActivitiesOne,
-  fetchFormattedArticle,
-  fetchArticleComment,
-  addArticleComment,
-  addFlipBoardComment,
-  addCommentLike,
 
   getStatus,
   getSessionKey,
   isLogin,
   login,
 
-  getInfluencer,
-  getCirleByName,
-  getCirleById,
-  fetchInfluencerSmart,
+  fetchActivitiesSmart,
 };

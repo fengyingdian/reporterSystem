@@ -62,7 +62,7 @@ Component({
 
       // const currentPages = getCurrentPages();
 
-      // // user enter flimi from vcomment, such as:
+      // // user enter Flime from vcomment, such as:
       // // share card / share poster / notification
       // if (currentPages.length === 1) {
       //   wx.reLaunch({

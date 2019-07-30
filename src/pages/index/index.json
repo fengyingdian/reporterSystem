@@ -1,11 +1,8 @@
 {
   "usingComponents": {
-    "TopBar": "../../components/TopBar/index",
-    "LoadingSmall": "../../components/LoadingSmall/index",
-    "LaunchingPage": "../../components/LaunchingPage/index",
     "LoadingPage": "./LoadingPage/index",
-    "ArticleCard": "./ArticleCard/index",
-    "ArticleCardWithPrime": "./ArticleCardWithPrime/index"
-  },
-  "onReachBottomDistance": 1000
+    "TopBar": "../../components/TopBar/index",
+    "ThemeList": "./ThemeList/index",
+    "ArticleList": "./ArticleList/index"
+  }
 }

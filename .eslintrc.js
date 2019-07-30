@@ -11,7 +11,7 @@ module.exports = {
   globals: {
     // true to allow the variable to be overwritten or false to disallow overwriting
     getApp: false,
-    Flimi: false,
+    console: false,
     wx: false,
     App: false,
     Page: false,
@@ -22,5 +22,7 @@ module.exports = {
     'html/html-extensions': ['.html', '.wxml'],
   },
   // add your custom rules here
-  rules: {},
+  rules: {
+    'no-console': 'off',
+  },
 };
