@@ -1,0 +1,11 @@
+<view class="container col">
+  <image
+    class="image image-show"
+    mode="aspectFill"
+    src="{{cover}}"
+    binderror="onCoverError"
+    bindload="onCoverLoad"/>
+  <text class="title"> {{title}} </text>
+  <text class="excerpt"> {{excerpt}} </text>
+  <view class="line" />
+</view>

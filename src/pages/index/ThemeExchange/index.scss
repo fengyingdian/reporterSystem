@@ -1,0 +1,27 @@
+/* ThemeList/index/index.wxss */
+.container {
+  width: 100vw;
+  height: 80rpx;
+  border-top: 1rpx solid #eee;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text {
+  margin: 0 8rpx 0;
+  font-size: 32rpx;
+  color: #999;
+}

@@ -15,9 +15,14 @@ Page({
 
     // top margin
     topMargin: wx.getSystemInfoSync().statusBarHeight + 45,
+    // bottom margin
+    bottomMargin: 80,
     // eslint-disable-next-line max-len
     contentAreaHeight:
       wx.getSystemInfoSync().screenHeight - wx.getSystemInfoSync().statusBarHeight - 45,
+
+    isTopShow: true,
+    isBottomShow: false,
 
     // current theme
     currentThemeIndex: 0,
@@ -72,6 +77,7 @@ Page({
     // current article list
     currentArticleList: [],
     perPage: 7,
+    pageKey: '',
   },
 
   onLoad() {
@@ -83,19 +89,25 @@ Page({
 
   onHide() {},
 
-  async init() {
+  init() {
     const that = this;
-    const { perPage } = that.data;
+    const { perPage, pageKey } = that.data;
     // get theme list
 
     // get current theme article list
     // const currentTheme = themeList[currentThemeIndex];
 
-    api.fetchActivitiesSmart('', perPage).then((res) => {
+    api.fetchActivitiesSmart(pageKey, perPage).then((res) => {
       const {
         data: articles,
-        meta: { pageKey },
+        meta: { pageKey: newKey },
       } = res.data;
+      if (articles.length < 1) {
+        that.setData({
+          endOfPage: true,
+        });
+        return;
+      }
       const currentArticleList = articles.map((article) => {
         const {
           covers: [cover],
@@ -110,14 +122,18 @@ Page({
           articleId,
         };
       });
+      const [todayArticle] = currentArticleList;
       if (articles.length < perPage) {
         that.setData({
+          currentArticleList: [...that.data.currentArticleList, ...currentArticleList.slice(1)],
+          todayArticle,
           endOfPage: true,
         });
       } else {
         that.setData({
-          currentArticleList: [...that.data.currentArticleList, ...currentArticleList],
-          pageKey,
+          currentArticleList: [...currentArticleList.slice(1)],
+          todayArticle,
+          pageKey: newKey,
         });
         console.log(that.data.currentArticleList);
       }
@@ -141,8 +157,31 @@ Page({
 
   onReachBottom() {},
 
-  /**
-   * 用户点击右上角分享
-   */
+  onPageScroll({ scrollTop }) {
+    if (this.data.topMargin + 168 < scrollTop) {
+      if (!this.data.isBottomShow) {
+        this.setData({
+          isBottomShow: true,
+          isTopShow: false,
+          navigatorBarTitle: this.data.themeList[this.data.currentThemeIndex].name,
+        });
+      }
+    } else if (this.data.isBottomShow) {
+      this.setData({
+        isBottomShow: false,
+        isTopShow: true,
+        navigatorBarTitle: '',
+      });
+    }
+  },
+
   onShareAppMessage() {},
+
+  onThemeExchange() {
+    this.init();
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300,
+    });
+  },
 });

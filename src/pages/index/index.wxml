@@ -1,19 +1,17 @@
 <LoadingPage wx:if="{{attachLoadingPage}}" show="{{showLoadingPage}}"/>
-<TopBar />
+<TopBar title="{{navigatorBarTitle}}"/>
 <view class='container'>
   <view style="height:{{topMargin}}px;width:100vw" />
-  <view class="content-container">
-    <scroll-view
-      scroll-y="true"
-      class="theme-list"
-      style="height:{{contentAreaHeight}}px;">
-      <ThemeList currentTheme="{{currentThemeIndex}}" themeList="{{themeList}}"/>
-    </scroll-view>
-    <scroll-view
-      scroll-y="true"
-      class="article-list"
-      style="height:{{contentAreaHeight}}px;">
-      <ArticleList articleList="{{currentArticleList}}"/>
-    </scroll-view>
-  </view>
+  <text class="top-tips"> flipboard </text>
+  <view class="title"> TODAY </view>
+  <view class="theme"> {{themeList[currentThemeIndex].name}} </view>
+  <ArticleCardToday title="{{todayArticle.title}}" excerpt="{{todayArticle.excerpt}}" cover="{{todayArticle.cover}}" />
+  <ArticleList articleList="{{currentArticleList}}"/>
+  <view style="height:{{bottomMargin}}rpx;width:100vw" />
+</view>
+<view class="top col {{isTopShow ? 'top-show' : ''}}" style="top:{{isTopShow ? topMargin : -100}}px">
+  <ThemeRibbon themeList="{{themeList}}" catch:themeSelect='onThemeSelect'/>
+</view>
+<view class="bottom col {{isBottomShow ? 'bottom-show' : ''}}">
+  <ThemeExchange catch:themeExchange='onThemeExchange'/>
 </view>

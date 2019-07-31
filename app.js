@@ -14,7 +14,7 @@ const Settings = require('./dist/Settings').default;
 // to set navigationBarTitleText add to get it
 // because wx only provide the wx.setNavigationBarTitle
 // but no wx.getNavigationBarTile api here
-wx.env.navigationBarTitle = 'mini-scaffold';
+wx.env.navigationBarTitle = '红板报·主题精选';
 
 App({
   onLaunch() {

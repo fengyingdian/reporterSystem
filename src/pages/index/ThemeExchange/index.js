@@ -1,9 +1,6 @@
 // pages/index/index.js
 Component({
-  properties: {
-    themeList: Array,
-    currentTheme: Number,
-  },
+  properties: {},
 
   data: {},
 
@@ -23,12 +20,8 @@ Component({
   },
 
   methods: {
-    onTheme(opts) {
-      this.setData({
-        currentTheme: opts.currentTarget.dataset.index,
-      });
+    onExchange() {
+      this.triggerEvent('themeExchange');
     },
-
-    onMore() {},
   },
 });

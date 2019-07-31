@@ -1,5 +1,8 @@
 /* pages/index/index.wxss */
 .container {
+  padding: 48rpx 32rpx 0;
+  width: 686rpx;
+  background-color: white;
 }
 
 .col {
@@ -9,34 +12,22 @@
   align-items: flex-start;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-container {
-  padding: rpx;
-  margin: 32rpx 0 0;
-  width: 686rpx;
-  background-color: white;
-}
-
-.date {
-  font-size: 36rpx;
-  font-weight: 900;
-  line-height: 60rpx;
-  margin-left: 32rpx;
-  color: #444;
-}
-
 .title {
+  margin: 12rpx 0 0;
   font-size: 36rpx;
   font-weight: 500;
   line-height: 60rpx;
-  margin-left: 24rpx;
   color: #444;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.excerpt {
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: #999;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -45,13 +36,19 @@
 
 .image {
   background: #eee;
-  width: 200rpx;
-  min-width: 200rpx;
-  height: 120rpx;
+  width: 686rpx;
+  height: 340rpx;
   opacity: 0;
 }
 
 .image-show {
   opacity: 1;
   transition: all 1s;
+}
+
+.line {
+  margin: 36rpx 0 0;
+  width: 686rpx;
+  height: 2rpx;
+  background-color: #ddd;
 }

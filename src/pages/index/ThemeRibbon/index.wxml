@@ -1,0 +1,22 @@
+<view class="container">
+  <block wx:for="{{themeList}}" wx:for-index="index" wx:for-item="item">
+    <view
+      wx:key="{{item.id}}"
+      class="image-box {{index === currentTheme ? 'selected' : ''}}"
+      catch:tap="onTheme"
+      data-index="{{index}}">
+      <image class="image" src="" />
+      <view class="text-box col">
+        <text class="text"> {{item.name}} </text>
+      </view>
+    </view>
+  </block>
+  <view
+    class="image-box more"
+    catch:tap="onMore">
+    <image class="image" src="" />
+    <view class="text-box col">
+      <text class="text"> 更多主题 </text>
+    </view>
+  </view>
+</view>

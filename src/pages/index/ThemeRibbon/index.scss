@@ -1,0 +1,58 @@
+/* ThemeList/index/index.wxss */
+.container {
+  width: 718rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 24rpx 0 24rpx 32rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.image-box{
+  align-self: center;
+  overflow: hidden;
+  width: 140rpx;
+  min-width: 140rpx;
+  height: 140rpx;
+  background-color: #fff;
+  font-size: 36rpx;
+  margin: 0 32rpx 0 0;
+}
+
+.image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.text-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 150rpx;
+  background-color: #f23030;
+  z-index: 2;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.more {
+  margin: 0 64rpx 0 0;
+}
+
+
+
