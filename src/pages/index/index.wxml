@@ -2,7 +2,7 @@
 <TopBar title="{{navigatorBarTitle}}"/>
 <view class='container'>
   <view style="height:{{topMargin}}px;width:100vw" />
-  <text class="top-tips"> flipboard </text>
+  <text class="top-tips"> Powered by flipboard </text>
   <view class="title"> TODAY </view>
   <view class="theme"> {{themeList[currentThemeIndex].name}} </view>
   <ArticleCardToday title="{{todayArticle.title}}" excerpt="{{todayArticle.excerpt}}" cover="{{todayArticle.cover}}" />

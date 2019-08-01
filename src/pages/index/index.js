@@ -177,11 +177,22 @@ Page({
 
   onShareAppMessage() {},
 
+  onThemeSelect(opts) {
+    this.onThemeChagne(opts.detail.currentThemeIndex);
+  },
+
   onThemeExchange() {
-    this.init();
+    this.onThemeChagne(parseInt(Math.random() * this.data.themeList.length, 10));
+  },
+
+  onThemeChagne(currentThemeIndex) {
+    this.setData({
+      currentThemeIndex,
+    });
     wx.pageScrollTo({
       scrollTop: 0,
       duration: 300,
     });
+    this.init();
   },
 });

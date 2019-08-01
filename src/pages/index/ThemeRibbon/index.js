@@ -24,9 +24,7 @@ Component({
 
   methods: {
     onTheme(opts) {
-      this.setData({
-        currentTheme: opts.currentTarget.dataset.index,
-      });
+      this.triggerEvent('themeSelect', { currentThemeIndex: opts.currentTarget.dataset.index });
     },
 
     onMore() {},
