@@ -1,11 +1,11 @@
 {
   "usingComponents": {
-    "LoadingPage": "./LoadingPage/index",
-    "TopBar": "../../components/TopBar/index",
-    "ThemeExchange": "./ThemeExchange/index",
-    "ThemeRibbon": "./ThemeRibbon/index",
-    "ArticleCardToday": "./ArticleCardToday/index",
-    "ArticleList": "./ArticleList/index"
+    "loadingpage": "./loadingpage/index",
+    "topbar": "../../components/topbar/index",
+    "authenticationinfo": "../../reportercomponents/authenticationinfo/index",
+    "personalbasicinfo": "../../reportercomponents/personalbasicinfo/index",
+    "educationinfo": "../../reportercomponents/educationinfo/index",
+    "workinfo": "../../reportercomponents/workinfo/index"
   },
   "enablePullDownRefresh": false
 }

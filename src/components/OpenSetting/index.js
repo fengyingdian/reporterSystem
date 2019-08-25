@@ -1,6 +1,6 @@
 Component({
   properties: {
-    launchAppAuthorization: {
+    isLaunchAppAuthorization: {
       type: Boolean,
       value: false,
       // observer(newVal, oldVal, changedPath) {
@@ -16,6 +16,7 @@ Component({
   methods: {
     tapOpenSetting() {
       wx.openSetting();
+      // Flimi.AppBase().logManager.log('openSetting', e);
       this.triggerEvent('openSetting', {}, {});
     },
   },

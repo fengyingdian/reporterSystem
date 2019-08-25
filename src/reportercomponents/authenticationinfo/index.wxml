@@ -1,0 +1,41 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-start">
+   <template
+    is="form-subtitle"
+    data="{{name:'验证信息'}}"/>
+
+  <formswitch
+    name="是否新闻单位驻地方机构记者"
+    value="{{isDispatched}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeDisPatched"
+    />
+  <formswitch
+    name="是否免培"
+    value="{{isFreeTraining}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeFreeTraining"
+    />
+  <formpicker
+    name="证件类型"
+    array="{{authentications}}"
+    index="{{authenticationType}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeAuthenticationType"
+    />
+  <forminput
+    name="证件号码"
+    value="{{idCode}}"
+    placeholder="xxxx"
+    isShowSplit="{{true}}"
+    bind:confirm="onConfirmIDCode"
+    />
+  <forminput
+    name="考试成绩"
+    value="{{score}}"
+    placeholder="xx"
+    isShowSplit="{{false}}"
+    bind:confirm="onConfirmScore"
+    />
+</view>

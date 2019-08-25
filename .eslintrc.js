@@ -17,6 +17,7 @@ module.exports = {
     Page: false,
     Component: false,
     getCurrentPages: false,
+    Reporter: false,
   },
   settings: {
     'html/html-extensions': ['.html', '.wxml'],

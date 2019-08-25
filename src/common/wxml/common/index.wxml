@@ -1,0 +1,28 @@
+<template name="form-subtitle" >
+  <view class="form-subtitle-container">
+    <text class="form-subtitle-text"> {{name}} </text>
+  </view>
+</template>
+
+
+<template name="form-item-more">
+  <view class="row-end" style="align-items:center">
+    <text style="padding: 0 32rpx"> {{ value }} </text>
+    <image
+      style="width:40rpx;height:40rpx;"
+      src="/assets/icons/more.png"
+      />
+  </view>
+</template>
+
+
+<template name="form-text">
+  <view class="form-item-container">
+    <view class="row-space-between form-item">
+      <text class="form-item-name-box"> {{name}} </text>
+      <view class="row-end form-item-value">
+        <text style="flex:1"> {{value}} </text>
+      </view>
+    </view>
+  </view>
+</template>

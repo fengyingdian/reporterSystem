@@ -1,0 +1,12 @@
+<!--components/launchapp/index.wxml-->
+<view
+  wx:if="{{!remove}}"
+  class="popup {{hide ? 'hide' : ''}}"
+  catch:tap="onClose">
+  <view
+    class="container"
+    style="top:{{statusBar + 50}}px;left:{{menuButton.left + 0.25 * menuButton.width - 174}}px"
+    >
+    {{tips}}
+  </view>
+</view>

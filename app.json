@@ -10,5 +10,6 @@
     "enablePullDownRefresh": true,
     "navigationStyle": "custom"
   },
-  "cloud": true
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
 }

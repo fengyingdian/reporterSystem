@@ -1,0 +1,11 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="form-button-container" style="background:{{background}}">
+  <view class="row-center form-button" bind:tap="onTap">
+    <view class="col-center form-square-button-box">
+      <image class="form-square-button-image" src="{{src}}" />
+    </view>
+    <text class="form-square-button-tip"> {{tip}} </text>
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

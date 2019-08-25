@@ -1,0 +1,29 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-start">
+   <template
+    is="form-subtitle"
+    data="{{name:'教育经历'}}"/>
+
+  <formpicker
+    name="最高学位/学历"
+    array="{{academicDegrees}}"
+    index="{{academicDsgreeType}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeAcademicDsgreeType"
+    />
+  <forminput
+    name="学科专业"
+    value="{{idCode}}"
+    placeholder="xxxx"
+    isShowSplit="{{true}}"
+    bind:confirm=""
+    />
+  <formitembutton
+    tip="添加教育经历"
+    src="/assets/icons/add.png"
+    background="#efe"
+    isShowSplit="{{true}}"
+    />
+  <educationexperience />
+</view>

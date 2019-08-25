@@ -1,5 +1,5 @@
 {
-	"description": "flime小程序项目配置文件",
+	"description": "Reporter小程序项目配置文件",
 	"compileType": "miniprogram",
 	"setting": {
 		"urlCheck": false,
@@ -12,8 +12,8 @@
 		"uglifyFileName": true
 	},
 	"libVersion": "2.5.0",
-	"appid": "wx1b217f7d1610ecaa",
-	"projectname": "flime",
+	"appid": "wxd2bb4b71e03311dc",
+	"projectname": "reporterSystem",
 	"packOptions": {
 		"ignore": []
 	},
@@ -38,5 +38,7 @@
 			}
 		]
 	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {}
 }

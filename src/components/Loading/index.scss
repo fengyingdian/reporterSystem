@@ -1,4 +1,4 @@
-@import '../../assets/company/logo.scss';
+@import '../../common/scss/logo.scss';
 
 .container {
   position: absolute;
@@ -10,14 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .name {
-    font-size: 50rpx;
-    font-weight: 900;
-    color: rgb(190, 187, 187);
-    margin: 20rpx;
-  }
-  .description {
-    font-size: 32rpx;
-    color: rgb(211, 206, 206);
-  }
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
 }

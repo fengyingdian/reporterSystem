@@ -1,4 +1,4 @@
-import settings from '../Settings';
+import settings from '../settings';
 
 export const formatNumber = (n) => {
   const m = n.toString();

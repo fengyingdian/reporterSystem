@@ -1,0 +1,76 @@
+<template name="avatar" >
+  <button
+    class="avatar-box col-start"
+    form-type="submit"
+    hover-class="none">
+    <image class='avatar'
+      mode='aspectFill'
+      src='{{avatar}}'/>
+    <image
+      class='brand'
+      mode='aspectFill'
+      src='/assets/icons/brand.png'/>
+  </button>
+</template>
+
+<template name="avatar-form" >
+  <form
+    catch:submit="onInfluencer"
+    report-submit="true">
+    <template is="avatar" data="{{avatar}}"/>
+  </form>
+</template>
+
+<template name="profile">
+  <button
+    class="profile col-start"
+    form-type="submit"
+    hover-class="none">
+    <view class="title-box overflow-line-1">
+      <text class='name'>{{nickname}}</text>
+      <text class='desc'>{{description}}</text>
+    </view>
+    <text class="comment overflow-line-3">{{comment}}</text>
+  </button>
+</template>
+
+<template name="profile-with-time">
+  <button
+    class="profile col-start"
+    form-type="submit"
+    hover-class="none">
+    <view class="title-box overflow-line-1">
+      <text class='name'>{{nickname}}</text>
+      <text class='desc'>{{time || description}}</text>
+    </view>
+    <text class="comment overflow-line-3">{{comment}}</text>
+  </button>
+</template>
+
+<template name="profile-form">
+  <form
+    catchsubmit="onArticle"
+    report-submit="true">
+    <template is="profile" data="{{nickname, description, time, comment}}"/>
+  </form>
+</template>
+
+<template name="user-form">
+  <view
+    wx:if="{{avatar}}"
+    class="user row-start">
+    <template is="avatar-form" data="{{avatar}}"/>
+    <template is="profile-form" data="{{nickname, description: description || introduction, time, comment}}"/>
+  </view>
+</template>
+
+<template name="user-with-time">
+  <view
+    wx:if="{{avatar}}"
+    class="user row-start">
+    <template is="avatar" data="{{avatar}}"/>
+    <template is="profile-with-time" data="{{nickname, description: description || introduction, time, comment}}"/>
+  </view>
+</template>
+
+

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "formswitch": "../formswitch/index",
+    "formpicker": "../formpicker/index",
+    "forminput": "../forminput/index",
+    "formitembutton": "../formitembutton/index",
+    "workexperience": "../workexperience/index"
+  }
+}

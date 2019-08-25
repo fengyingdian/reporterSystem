@@ -2,6 +2,6 @@
 <view class="tab">
   <view class="statusBar" style="height:{{statusBar}}px;" />
   <view class="navigateBar">
-    <text class="title {{show}}"> {{title}} </text>
+    <text class="title"> {{title}} </text>
   </view>
 </view>

@@ -4,24 +4,21 @@
   top: 0;
   left: 0;
   z-index: 10;
-  border-bottom: 1rpx solid #eee;
   overflow: hidden;
   .statusBar{
     width: 100vw;
-    background: white;
   }
   .navigateBar {
     width: 100vw;
-    height: 45px;
+    height: 44px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    background: white;
     .options {
       position: fixed;
       width: 100vw;
-      height: 45px;
+      height: 44px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -44,10 +41,10 @@
       left: 200rpx;
       opacity: 0;
       width: 350rpx;
-      height: 45px;
+      height: 44px;
       font-size: 17px;
       font-weight: 600;
-      line-height: 45px;
+      line-height: 44px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -60,8 +57,8 @@
         border-radius: 50%;
       }
       .title {
-        height: 45px;
-        line-height: 45px;
+        height: 44px;
+        line-height: 44px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;

@@ -7,14 +7,7 @@
 // app.js
 const api = require('./dist/service/api');
 const wxPromisify = require('./dist/service/wxpromisify');
-const Settings = require('./dist/Settings').default;
-
-// NOTE
-// I can find no more convenient way
-// to set navigationBarTitleText add to get it
-// because wx only provide the wx.setNavigationBarTitle
-// but no wx.getNavigationBarTile api here
-wx.env.navigationBarTitle = '红板报·主题精选';
+const settings = require('./dist/settings').default;
 
 App({
   onLaunch() {
@@ -32,7 +25,7 @@ App({
 
   onLaunchCount() {
     try {
-      this.globalData.launchCount = wx.getStorageSync(Settings.LAUNCH_COUNT);
+      this.globalData.launchCount = wx.getStorageSync(settings.LAUNCH_COUNT);
     } catch (e) {
       this.globalData.launchCount = 0;
     }

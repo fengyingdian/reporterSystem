@@ -1,0 +1,21 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="form-item-container">
+  <view class="row-space-between form-item">
+    <view class="form-item-name-box row-start">
+      <text class="form-item-name">{{name}}</text>
+      <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text>
+    </view>
+    <view class=" row-end form-item-value">
+      <picker
+        bindchange="onchange"
+        mode="date"
+        value="{{value}}"
+        start="{{'1900-00-00'}}"
+        end="{{'2100-00-00'}}">
+        <template is="form-item-more" data="{{value}}"/>
+      </picker>
+    </view>
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

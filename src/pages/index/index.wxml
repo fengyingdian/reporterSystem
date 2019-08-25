@@ -1,17 +1,11 @@
-<LoadingPage wx:if="{{attachLoadingPage}}" show="{{showLoadingPage}}"/>
-<TopBar title="{{navigatorBarTitle}}"/>
-<view class='container'>
-  <view style="height:{{topMargin}}px;width:100vw" />
-  <text class="top-tips"> Powered by flipboard </text>
-  <view class="title"> TODAY </view>
-  <view class="theme"> {{themeList[currentThemeIndex].name}} </view>
-  <ArticleCardToday title="{{todayArticle.title}}" excerpt="{{todayArticle.excerpt}}" cover="{{todayArticle.cover}}" />
-  <ArticleList articleList="{{currentArticleList}}"/>
-  <view style="height:{{bottomMargin}}rpx;width:100vw" />
-</view>
-<view class="top col {{isTopShow ? 'top-show' : ''}}" style="top:{{isTopShow ? topMargin : -100}}px">
-  <ThemeRibbon themeList="{{themeList}}" catch:themeSelect='onThemeSelect'/>
-</view>
-<view class="bottom col {{isBottomShow ? 'bottom-show' : ''}}">
-  <ThemeExchange catch:themeExchange='onThemeExchange'/>
+<loadingpage wx:if="{{attachLoadingPage}}" show="{{showLoadingPage}}"/>
+
+<topbar />
+
+<view>
+  <view style="width:100vw:;height:{{topMargin}}px" />
+  <authenticationinfo />
+  <personalbasicinfo />
+  <educationinfo />
+  <workinfo />
 </view>

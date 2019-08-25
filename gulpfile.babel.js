@@ -71,7 +71,7 @@ export const jsBuild = () => gulp
           {
             replacements: [
               {
-                identifierName: 'Flime',
+                identifierName: 'Reporter',
                 member: 'AppBase',
                 replacement: {
                   type: 'identifier',

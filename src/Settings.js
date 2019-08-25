@@ -1,4 +1,12 @@
 // App Settings and Constants
+
+// NOTE
+// I can find no more convenient way
+// to set navigationBarTitleText add to get it
+// because wx only provide the wx.setNavigationBarTitle
+// but no wx.getNavigationBarTile api here
+wx.env.navigationBarTitle = '记者';
+
 const settings = {
   // file storage position
   STORAGE_FILE_PATH: './storage/index.json',

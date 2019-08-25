@@ -1,0 +1,12 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="form-item-container">
+  <view class="row-space-between form-item">
+    <view class="form-item-name-box row-start">
+      <text class="form-item-name">{{name}}</text>
+      <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text>
+    </view>
+    <switch checked="{{value}}" bindchange="onChange" />
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

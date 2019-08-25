@@ -3,28 +3,6 @@ Component({
     title: {
       type: String,
       value: wx.env.navigationBarTitle,
-      observer(newValue) {
-        if (newValue === wx.env.navigationBarTitle) {
-          this.setData({
-            show: 'showInmediately',
-            avatarShow: false,
-          });
-        } else {
-          this.setData({
-            show: 'hideInmediately',
-          });
-          if (this.data.avatar && this.data.avatar.length > 0) {
-            this.setData({
-              avatarShow: true,
-            });
-          }
-          setTimeout(() => {
-            this.setData({
-              show: 'showTransition',
-            });
-          }, 100);
-        }
-      },
     },
   },
 
@@ -86,7 +64,7 @@ Component({
 
     onProfile() {
       wx.navigateTo({
-        url: '/pages/profile/index',
+        url: '/pages/soterauthentication/index',
       });
     },
   },

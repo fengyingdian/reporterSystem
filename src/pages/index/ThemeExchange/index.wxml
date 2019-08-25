@@ -1,4 +1,0 @@
-<view class="container row" catch:tap="onExchange" >
-  <image class="image" src="/assets/icons/exchange.png" />
-  <text class="text"> 换主题 </text>
-</view>

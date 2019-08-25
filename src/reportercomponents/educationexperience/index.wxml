@@ -1,0 +1,43 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-start" style="margin: 24rpx 0 0 0">
+  <formdatepicker
+    name="起始日期"
+    value="{{startDate}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeStartDate"
+    />
+  <formdatepicker
+    name="结束日期"
+    value="{{endDate}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeEndDate"
+    />
+  <forminput
+    name="就读院校"
+    value="{{schoolName}}"
+    placeholder="xxx"
+    isShowSplit="{{true}}"
+    bind:confirm="onConfirmSchoolName"
+    />
+  <forminput
+    name="学科专业"
+    value="{{specialization}}"
+    placeholder="xxx"
+    isShowSplit="{{true}}"
+    bind:confirm="onConfirmSpecialization"
+    />
+  <formpicker
+    name="最高学位/学历"
+    array="{{academicDegrees}}"
+    index="{{academicDsgreeType}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeAcademicDsgreeType"
+    />
+  <formitembutton
+    tip="删除该条经历"
+    src="/assets/icons/minus.png"
+    background="#fee"
+    isShowSplit="{{true}}"
+    />
+</view>

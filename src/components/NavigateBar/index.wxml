@@ -1,5 +1,6 @@
 <!--components/tabtop/index.wxml-->
-<view class="container">
+<view class="container"
+  style="{{status === 0 ? 'background:#fff;border-bottom: 1rpx solid #eee' : 'background:rgba(255,255,255,0);'}}">
   <view class="statusBar" style="height:{{statusBar}}px;"/>
   <view class="navigateBar">
     <view class="options">

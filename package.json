@@ -1,5 +1,5 @@
 {
-  "name": "Flime",
+  "name": "Reporter",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -49,12 +49,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlipboardChina/Flime.git"
+    "url": "git+https://github.com/FlipboardChina/Reporter.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FlipboardChina/Flime/issues"
+    "url": "https://github.com/FlipboardChina/Reporter/issues"
   },
-  "homepage": "https://github.com/FlipboardChina/Flime#readme"
+  "homepage": "https://github.com/FlipboardChina/Reporter#readme"
 }

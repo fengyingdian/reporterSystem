@@ -1,4 +1,4 @@
-<!--components/LaunchContact/index.wxml-->
+<!--components/launchcontact/index.wxml-->
 <view class="container">
   <image src="https://ol0hvs2t3.qnssl.com/20180808140930_bR2Nus_e7865f76-02a1-46f9-9500-159a8cf0c222-1520381250158.jpeg" />
   <text> 根据微信分享规则 </text>

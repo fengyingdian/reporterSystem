@@ -1,6 +1,4 @@
 <!--components/tabtop/index.wxml-->
 <view class="container">
-  <view class="svg" />
-  <!--text class="name"> 红板报 </text>
-  <text class="description"> 用最酷的方式看世界 </text-->
+  <view class="svg-{{color}} logo" />
 </view>

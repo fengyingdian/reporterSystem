@@ -1,0 +1,52 @@
+/* components/launchapp/index.wxss */
+.container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: inherit;
+  .input {
+    color: #999;
+    margin: 32rpx 32rpx;
+    width: 686rpx;
+    line-height: 40rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    text-align: left;
+    position: relative;
+    z-index: 20;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 686rpx;
+    margin: 0 32rpx 40rpx;
+    text {
+      color: #999;
+      font-size: 28rpx;
+      line-height: 40rpx;
+      margin-right: 32rpx;
+    }
+    button {
+      width: 104rpx;
+      height: 56rpx;
+      line-height: 56rpx;
+      font-size: 28rpx;
+      color: #fff;
+      background: #e32828;
+      text-align: center;
+    }
+  }
+}
+
+.placeholder {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #999;
+}
