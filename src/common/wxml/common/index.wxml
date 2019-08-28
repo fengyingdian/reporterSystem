@@ -15,14 +15,18 @@
   </view>
 </template>
 
-
 <template name="form-text">
-  <view class="form-item-container">
+  <view class="col-center form-item-container">
     <view class="row-space-between form-item">
       <text class="form-item-name-box"> {{name}} </text>
       <view class="row-end form-item-value">
         <text style="flex:1"> {{value}} </text>
       </view>
     </view>
+    <view wx:if="{{isShowSplit}}" class="form-item-split" />
   </view>
+</template>
+
+<template name="company-info">
+  <text > {{company}} </text>
 </template>

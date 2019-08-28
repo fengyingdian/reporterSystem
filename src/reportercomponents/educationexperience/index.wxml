@@ -38,6 +38,6 @@
     tip="删除该条经历"
     src="/assets/icons/minus.png"
     background="#fee"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     />
 </view>

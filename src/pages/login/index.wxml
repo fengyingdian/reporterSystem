@@ -1,0 +1,14 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<navigatebar title="{{title}}"/>
+
+<view>
+  <view style="width:100vw:;height:{{topMargin}}px" />
+  <idcard bind:idcard="onIdCard"/>
+  <view class="col-center operation-container">
+    <template is="form-text" data="{{ name: '姓名', value: name, isShowSplit: true }}"/>
+    <!-- <template is="form-text" data="{{ name: '地址', value: addr, isShowSplit: true }}"/> -->
+    <template is="form-text" data="{{ name: '身份证号', value: id, isShowSplit: false }}"/>
+  </view>
+  <image src="{{image}}" />
+</view>

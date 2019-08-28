@@ -1,10 +1,32 @@
 @import '../../common/scss/common.scss';
 
-page {
+.split-line {
+  width: 526rpx;
+  height: 1px;
+  margin: 32rpx;
   background: #eee;
 }
 
-.split-line {
-  height: 24rpx;
-  width: 100vw;
+.login-container {
+  box-shadow: 0 0 12rpx #eee;
+  border-radius: 20rpx;
+  margin: 48rpx;
+  padding: 32rpx;
+  width: 590rpx;
+}
+
+.operation-container {
+  box-shadow: 0 0 6rpx #eee;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  margin: 48rpx 0 ;
+}
+
+.register {
+  color: blue;
+  font-size: 60rpx;
+  font-weight: 900;
+  margin: 12rpx 32rpx 32rpx;
+  padding: 0 0 12rpx 0;
+  border-bottom: 2px solid blue;
 }

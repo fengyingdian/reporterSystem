@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navigatebar": "../../components/navigatebar/index",
+    "idcard": "../../reportercomponents/idcard/index"
+  },
+  "enablePullDownRefresh": false
+}

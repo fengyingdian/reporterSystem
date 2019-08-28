@@ -1,7 +1,8 @@
 
-<view class="container {{hide}}">
+<view class="col-center container {{show ? '' : 'hide'}}">
   <view class="loading-box">
     <image class="loading" src="/assets/icons/loading.gif" />
-    <image class="title" src="/assets/icons/appName.png" />
+    <!-- <image class="brand" src="/assets/icons/appName.png" /> -->
+    <text class="title"> {{name}} </text>
   </view>
 </view>

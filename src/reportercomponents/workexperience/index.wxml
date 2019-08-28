@@ -24,13 +24,13 @@
     name="担任职务"
     value="{{specialization}}"
     placeholder="xxx"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     bind:confirm="onConfirmSpecialization"
     />
   <formitembutton
     tip="删除该条经历"
     src="/assets/icons/minus.png"
     background="#fee"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     />
 </view>

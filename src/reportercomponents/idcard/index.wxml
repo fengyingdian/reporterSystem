@@ -1,0 +1,7 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center container" >
+  <view class="idcard" bind:tap="onTap">
+    <image src="{{image ? image : '/assets/icons/id_card.png'}}" />
+  </view>
+</view>

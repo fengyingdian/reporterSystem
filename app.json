@@ -7,7 +7,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "红板报",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "navigationStyle": "custom"
   },
   "cloud": true,

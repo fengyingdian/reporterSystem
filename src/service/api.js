@@ -4,7 +4,7 @@
  * Author: Break <fengyingdian@126.com>
  */
 
-export const platform = 's';
+export const platform = 'l';
 
 export const HOST = (() => {
   if (platform === 's') {
@@ -103,14 +103,14 @@ const login = (code, encryptedData, iv) => wxRequest({
 });
 
 /**
- * home feed
+ * upload id card base64
  */
-const fetchActivitiesSmart = (pageKey, perPage) => wxRequestWithAuthorization({
-  url: `${HOST}/api/app/activities/feed/home`,
+const uploadIdCard = image => wxRequestWithAuthorization({
+  url: `${HOST}/api/app/wechat/actions/id-card-info`,
   data: {
-    page_key: pageKey,
-    per_page: perPage,
+    image,
   },
+  method: 'POST',
 });
 
 module.exports = {
@@ -121,5 +121,5 @@ module.exports = {
   isLogin,
   login,
 
-  fetchActivitiesSmart,
+  uploadIdCard,
 };

@@ -86,16 +86,27 @@
 .form-item-container {
   width: 100vw;
   background: #fff;
+  align-items: center;
 }
 
 .form-button-container {
   width: 100vw;
+  align-items: center;
 }
 
 .form-item {
   padding: 0 32rpx;
+  width: 686rpx;
   height: 80rpx;
   line-height: 80rpx;
+  align-items: center;
+}
+
+.form-item-middle {
+  padding: 0 32rpx;
+  width: 686rpx;
+  height: 120rpx;
+  line-height: 120rpx;
   align-items: center;
 }
 
@@ -110,10 +121,18 @@
   font-size: 32rpx;
   font-weight: 900;
   color: #444;
+  align-items: center;
 }
 
 .form-item-name {
   color: #444;
+}
+
+.form-item-icon {
+  width: 48rpx;
+  min-width: 48rpx;
+  height: 48rpx;
+  margin: 0 32rpx 0 0;
 }
 
 .form-item-name-is-needed {
@@ -123,7 +142,7 @@
 
 .form-item-value {
   font-size: 32rpx;
-  color: #444;
+  color: #999;
   margin: 0 0 0 64rpx;
   height: 100%;
   align-items: center;
@@ -136,7 +155,7 @@
 
 .form-item-split {
   height: 1px;
-  padding: 0 32rpx;
+  width: 686rpx;
   background: #eee;
 }
 
@@ -170,4 +189,10 @@
   font-size: 28rpx;
   color: #999;
   margin: 0 12rpx;
+}
+
+.company-info {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
 }

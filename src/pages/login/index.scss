@@ -1,0 +1,13 @@
+@import '../../common/scss/common.scss';
+
+.split-line {
+  height: 24rpx;
+  width: 100vw;
+}
+
+.operation-container {
+  box-shadow: 0 0 6rpx #eee;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  margin: 48rpx 0 ;
+}

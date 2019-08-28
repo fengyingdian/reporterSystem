@@ -5,7 +5,7 @@
 // to set navigationBarTitleText add to get it
 // because wx only provide the wx.setNavigationBarTitle
 // but no wx.getNavigationBarTile api here
-wx.env.navigationBarTitle = '记者';
+wx.env.navigationBarTitle = '记者证';
 
 const settings = {
   // file storage position

@@ -2,10 +2,30 @@
 
 <topbar />
 
-<view>
+<view class="col-center" style="align-items:center;">
   <view style="width:100vw:;height:{{topMargin}}px" />
-  <authenticationinfo />
-  <personalbasicinfo />
-  <educationinfo />
-  <workinfo />
+  <view class="login-container">
+    <login />
+  </view>
+  <view class="register" bindtap="onRegister"> {{'记者证注册入口'}}</view>
+  <view class="operation-container">
+    <formnavigator
+      icon="/assets/icons/exchange_certificate.png"
+      name="换证"
+      isShowSplit="{{true}}"/>
+    <formnavigator
+      icon="/assets/icons/supplement_certificate.png"
+      name="补签"
+      isShowSplit="{{true}}"/>
+    <formnavigator
+      icon="/assets/icons/annual_inspection.png"
+      name="年检"
+      isShowSplit="{{true}}"/>
+    <formnavigator
+      icon="/assets/icons/logout.png"
+      name="注销"
+      isShowSplit="{{false}}"/>
+  </view>
+  <text class="company-info" style="margin:80px 0 12rpx"> {{'国家新闻出版广电总局'}}</text>
+  <text class="company-info" style="margin:0 0 20px"> {{'中国新闻记者证申报系统'}}</text>
 </view>

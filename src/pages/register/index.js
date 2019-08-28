@@ -1,12 +1,3 @@
-/*
- * File: index.js
- * Project: Reporter
- * File Created: Saturday, 20th April 2019 10:34:22 pm
- * Author: break (fengyingdian@126.com)
- */
-
-// import api from '../../service/api';
-
 Page({
   data: {
     // attach loading page
@@ -16,6 +7,9 @@ Page({
 
     // top margin
     topMargin: wx.getSystemInfoSync().statusBarHeight + 44,
+
+    // title
+    title: '注册',
   },
 
   onLoad() {
@@ -41,11 +35,6 @@ Page({
     }, 1000);
   },
 
-  onRegister() {
-    wx.navigateTo({
-      url: '/pages/register/index',
-    });
-  },
 
   onReachBottom() {},
 

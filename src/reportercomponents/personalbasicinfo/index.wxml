@@ -78,7 +78,7 @@
     name="户口所在地"
     array="{{provinces}}"
     index="{{provinceType}}"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     bind:change=""
     />
 </view>

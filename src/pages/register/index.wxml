@@ -1,0 +1,9 @@
+<navigatebar title="{{title}}"/>
+
+<view>
+  <view style="width:100vw:;height:{{topMargin}}px" />
+  <authenticationinfo />
+  <personalbasicinfo />
+  <educationinfo />
+  <workinfo />
+</view>

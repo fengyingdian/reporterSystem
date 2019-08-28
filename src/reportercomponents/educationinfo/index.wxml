@@ -16,7 +16,7 @@
     name="学科专业"
     value="{{idCode}}"
     placeholder="xxxx"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     bind:confirm=""
     />
   <formitembutton

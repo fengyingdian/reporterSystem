@@ -1,12 +1,12 @@
 <import src="../../common/wxml/common/index.wxml" />
 
-<view class="form-item-container">
+<view class="col-center form-item-container">
   <view class="row-space-between form-item">
-    <view class="form-item-name-box row-start">
+    <view class="row-start form-item-name-box">
       <text class="form-item-name">{{name}}</text>
       <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text>
     </view>
-    <view class=" row-end form-item-value">
+    <view class="row-end form-item-value">
       <picker
         bindchange="onchange"
         value="{{index}}"

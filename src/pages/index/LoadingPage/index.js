@@ -6,13 +6,6 @@ Component({
     show: {
       type: Boolean,
       value: true,
-      observer(newValue) {
-        if (!newValue) {
-          this.setData({
-            hide: 'hide',
-          });
-        }
-      },
     },
   },
 
@@ -20,6 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    name: '中国记者',
   },
 
   attached() { },

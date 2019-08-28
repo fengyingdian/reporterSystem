@@ -1,0 +1,17 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center container">
+  <view class="avatar">
+    <open-data type="userAvatarUrl"/>
+  </view>
+  <open-data
+    wx:if="{{!isLogin}}"
+    class="name"
+    type="userNickName"
+    />
+  <text
+    wx:else
+    class="name"
+    > {{name}} </text>
+  <view class="login" bind:tap="onTap"> {{!isLogin ? '请登录': '退出登录'}} </view>
+</view>

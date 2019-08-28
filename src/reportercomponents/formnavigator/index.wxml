@@ -1,0 +1,12 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container" bind:tap="onTap">
+  <view class="row-space-between form-item-middle">
+    <view class="row-start form-item-name-box" style="font-size:40rpx;font-weight:500;">
+      <image class="form-item-icon" src="{{icon}}"/>
+      <text class="form-item-name" >{{name}}</text>
+    </view>
+    <template is="form-item-more"/>
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

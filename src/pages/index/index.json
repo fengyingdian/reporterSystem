@@ -1,11 +1,8 @@
 {
   "usingComponents": {
-    "loadingpage": "./loadingpage/index",
-    "topbar": "../../components/topbar/index",
-    "authenticationinfo": "../../reportercomponents/authenticationinfo/index",
-    "personalbasicinfo": "../../reportercomponents/personalbasicinfo/index",
-    "educationinfo": "../../reportercomponents/educationinfo/index",
-    "workinfo": "../../reportercomponents/workinfo/index"
+    "login": "../../reportercomponents/login/index",
+    "formnavigator": "../../reportercomponents/formnavigator/index",
+    "topbar": "../../components/topbar/index"
   },
   "enablePullDownRefresh": false
 }

@@ -104,7 +104,7 @@
     tip="添加工作经历"
     src="/assets/icons/add.png"
     background="#efe"
-    isShowSplit="{{true}}"
+    isShowSplit="{{false}}"
     />
   <workexperience />
 </view>
