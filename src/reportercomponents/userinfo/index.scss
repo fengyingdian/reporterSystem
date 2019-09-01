@@ -1,0 +1,42 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  margin: 32rpx 0;
+  align-items: center;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: #eee;
+  border: 2px solid #eee;
+  overflow: hidden;
+}
+
+.name {
+  margin: 8rpx 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  font-weight: 900;
+  color: #444;
+}
+
+.employer {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.login {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  padding: 4rpx 32rpx;
+  margin: 18rpx 0 0;
+  border: 1px solid green;
+  color: green;
+}

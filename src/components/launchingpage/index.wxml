@@ -1,5 +1,0 @@
-<view class="container">
-  <view class="comment-card {{commentTransition}}">
-    <image src='/assets/temp/bg.jpg' />
-  </view>
-</view>

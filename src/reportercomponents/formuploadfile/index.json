@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uploadfile": "../uploadfile/index"
+  },
+  "component": true
+}

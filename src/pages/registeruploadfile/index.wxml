@@ -1,0 +1,12 @@
+<navigatebar title="{{title}}"/>
+
+<view>
+  <view style="width:100vw;height:{{topMargin}}px" />
+  <formuploadfile name="{{'领取新闻记者证人员情况'}}" />
+  <formuploadfile name="{{'身份证'}}" />
+  <formuploadfile name="{{'毕业证或学位证'}}" />
+  <formuploadfile name="{{'培训合格证或免培证明'}}" />
+  <formuploadfile name="{{'劳动合同'}}" />
+  <formuploadfile name="{{'保密承诺书'}}" />
+  <formuploadfile name="{{'职业行为信息保密协议'}}" />
+</view>

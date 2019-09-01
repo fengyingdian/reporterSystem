@@ -1,0 +1,18 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="row-space-between form-item container">
+    <view class="row-start form-item-phone-number">
+      <input
+        style="flex:1"
+        type="number"
+        placeholder="{{placeholder}}"
+        class="input"
+        placeholder-class="input"
+        maxlength="{{maxlength}}"
+        value="{{value}}"
+        bindinput="onInput"/>
+    </view>
+    <button class="form-item-name name"> {{name}} </button>
+  </view>
+</view>

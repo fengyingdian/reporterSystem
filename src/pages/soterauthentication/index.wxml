@@ -1,0 +1,5 @@
+<view class="col-center container">
+  <button type="primary" data-mode="fingerPrint" bindtap="startAuth">fingerprint</button>
+  <view style="width:100vw;height:100px;" />
+  <button type="primary" data-mode="facial" bindtap="startAuth">facial</button>
+</view>

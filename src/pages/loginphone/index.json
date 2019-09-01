@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "topbar": "../../components/topbar/index",
+    "userinfo": "../../reportercomponents/userinfo/index",
+    "loadingpage": "../../components/loadingpage/index",
+    "loginphone": "../../reportercomponents/loginphone/index",
+    "loginbutton": "../../reportercomponents/loginbutton/index"
+  },
+  "enablePullDownRefresh": false
+}

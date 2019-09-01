@@ -1,0 +1,17 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  width: 686rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.no-verify-code {
+  background: #E4EEFE;
+}
+
+.has-verify-code {
+  background: #DF383E;
+}

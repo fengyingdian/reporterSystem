@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navigatebar": "../../components/navigatebar/index",
+    "formuploadfile": "../../reportercomponents/formuploadfile/index"
+  },
+  "enablePullDownRefresh": false
+}

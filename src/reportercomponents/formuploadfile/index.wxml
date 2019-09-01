@@ -1,0 +1,19 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="col-start form-uploadfile-item">
+    <text class="form-item-name">{{name}}</text>
+    <view class="row-start uploadfile-container">
+      <block
+        wx:for="{{filePaths}}"
+        wx:key="index"
+        >
+        <uploadfile
+          index="{{index}}"
+          filePath="{{item}}"
+          bind:uploadfile="onFilePath"
+          />
+      </block>
+    </view>
+  </view>
+</view>

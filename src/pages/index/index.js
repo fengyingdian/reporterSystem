@@ -9,17 +9,17 @@
 
 Page({
   data: {
-    // attach loading page
-    attachLoadingPage: true,
-    // show loading page
-    showLoadingPage: true,
-
     // top margin
     topMargin: wx.getSystemInfoSync().statusBarHeight + 44,
+
+    // user name
+    name: '李明月',
+
+    // user's employer
+    employer: '人民日报社',
   },
 
   onLoad() {
-    // then you can do other things
     this.init();
   },
 
@@ -27,25 +27,7 @@ Page({
 
   onHide() {},
 
-  init() {
-    const that = this;
-    setTimeout(() => {
-      that.setData({
-        attachLoadingPage: false,
-      });
-      setTimeout(() => {
-        that.setData({
-          showLoadingPage: false,
-        });
-      }, 1000);
-    }, 1000);
-  },
-
-  onRegister() {
-    wx.navigateTo({
-      url: '/pages/register/index',
-    });
-  },
+  init() {},
 
   onReachBottom() {},
 

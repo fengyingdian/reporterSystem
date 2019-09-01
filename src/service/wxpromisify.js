@@ -25,6 +25,10 @@ const login = wxPromisify(wx.login);
 
 const startGyroscope = wxPromisify(wx.startGyroscope);
 
+const chooseImage = wxPromisify(wx.chooseImage);
+
+const uploadFile = wxPromisify(wx.uploadFile);
+
 module.exports = {
   getImageInfo,
   canvasToTempFilePath,
@@ -34,4 +38,7 @@ module.exports = {
   pageScrollTo,
 
   login,
+
+  chooseImage,
+  uploadFile,
 };
