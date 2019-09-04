@@ -1,0 +1,22 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="col-start form-uploadfile-item">
+    <template is="form-item-uploadfile-title" data="{{name, isInited, value: filePaths[0].filePath }}" />
+    <view class="row-start uploadfile-container">
+      <block
+        wx:for="{{filePaths}}"
+        wx:key="index"
+        >
+        <uploadphotobutton
+          index="{{index}}"
+          name="{{item.name}}"
+          filePath="{{item.filePath}}"
+          bind:uploadfile="onUploadFile"
+          bind:deletefile="onDeleteFile"
+          />
+      </block>
+    </view>
+  </view>
+  <view class="form-item-split" />
+</view>

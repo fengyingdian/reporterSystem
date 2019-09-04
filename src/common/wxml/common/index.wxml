@@ -4,6 +4,18 @@
   </view>
 </template>
 
+<template name="form-subtitle-level-1" >
+  <view class="form-subtitle-level-1-container">
+    <text class="form-subtitle-text-level-1"> {{name}} </text>
+  </view>
+</template>
+
+<template name="form-subtitle-level-2" >
+  <view class="form-subtitle-level-2-container">
+    <text class="form-subtitle-text-level-2"> {{name}} </text>
+  </view>
+</template>
+
 
 <template name="form-item-more">
   <view class="row-end" style="align-items:center">
@@ -12,6 +24,67 @@
       style="width:40rpx;height:40rpx;"
       src="/assets/icons/more.png"
       />
+  </view>
+</template>
+
+<template name="form-item-picker-value">
+  <view
+    wx:if="{{!value}}"
+    class="row-space-between"
+    style="align-items:center;width:686rpx;">
+    <text style="color:#bbb;font-size:32rpx;"> {{ '请选择' }} </text>
+    <text wx:if="{{isInited}}" style="color:#d97c7c;font-size:28rpx;"> {{ '信息不能为空' }} </text>
+  </view>
+  <view
+    wx:else
+    class="row-start"
+    style="align-items:center;width:686rpx;">
+    <text style="color:#666;font-size:32rpx;"> {{ value }} </text>
+  </view>
+</template>
+
+<template name="form-item-input-value">
+  <view
+    wx:if="{{value===''}}"
+    class="row-space-between"
+    style="align-items:center;width:686rpx;">
+    <input
+      placeholder="{{placeholder}}"
+      value="{{value}}"
+      type="{{type}}"
+      style="flex:1"
+      placeholder-style="color:#bbb;font-size:32rpx;"
+      bindblur="onchange"
+      bindconfirm="onchange"/>
+    <text wx:if="{{isInited}}" style="color:#d97c7c;font-size:28rpx;"> {{ '信息不能为空' }} </text>
+  </view>
+  <view
+    wx:else
+    class="row-start"
+    style="align-items:center;width:686rpx;">
+    <input
+      placeholder="{{placeholder}}"
+      value="{{value}}"
+      type="{{type}}"
+      style="width:100%;color:#666;font-size:32rpx;"
+      bindblur="onchange"
+      bindconfirm="onchange"/>
+  </view>
+</template>
+
+<template name="form-item-uploadfile-title">
+  <view
+    wx:if="{{!value}}"
+    class="row-space-between form-uploadfile-name"
+    style="align-items:center;width:686rpx;">
+    <text> {{ name }} </text>
+    <text wx:if="{{isInited}}" style="color:#d97c7c;font-size:28rpx;"> {{ '附件不能为空' }} </text>
+  </view>
+  <view
+    wx:else
+    class="row-start form-uploadfile-name"
+    style="align-items:center;width:686rpx;">
+      <text> {{ name }} </text>
   </view>
 </template>
 

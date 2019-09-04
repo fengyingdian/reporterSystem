@@ -5,8 +5,8 @@
  * Author: break (fengyingdian@126.com)
  */
 
-const wxPromisify = wxCPSFunction => opts => new Promise((resolve, reject) => wxCPSFunction({
-  ...opts,
+const wxPromisify = wxCPSFunction => e => new Promise((resolve, reject) => wxCPSFunction({
+  ...e,
   success: (result) => {
     resolve(result);
   },

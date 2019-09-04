@@ -1,0 +1,13 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="row-space-between container">
+  <button
+    class="item pre"
+    bind:tap="onPre"
+    > {{pre}} </button>
+  <button
+    class="item next"
+    bind:tap="onNext"
+    > {{next}} </button>
+</view>
+

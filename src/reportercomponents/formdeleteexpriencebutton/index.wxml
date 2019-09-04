@@ -1,0 +1,6 @@
+<view class="row-center container">
+  <button
+    class="item"
+    bind:tap="onTap"
+    > {{title}} </button>
+</view>

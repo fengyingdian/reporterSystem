@@ -1,6 +1,29 @@
-<navigatebar title="{{title}}"/>
+<navigatebar title="{{title}}" home="{{false}}"/>
 
 <view>
   <view style="width:100vw:;height:{{topMargin}}px" />
-
+  <view hidden="{{pageIndex !== 0}}">
+    <personalbasicinfo
+      bind:pre="onPre"
+      bind:next="onNext"
+      />
+  </view>
+  <view hidden="{{pageIndex !== 1}}">
+    <educationinfo
+     bind:pre="onPre"
+     bind:next="onNext"
+     />
+  </view>
+  <view hidden="{{pageIndex !== 2}}">
+    <workinfo
+      bind:pre="onPre"
+      bind:next="onNext"
+      />
+  </view>
+  <view hidden="{{pageIndex !== 3}}">
+    <uploadfileinfo
+      bind:pre="onPre"
+      bind:next="onNext"
+      />
+  </view>
 </view>

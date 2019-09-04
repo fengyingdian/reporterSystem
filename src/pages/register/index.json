@@ -1,10 +1,10 @@
 {
   "usingComponents": {
     "navigatebar": "../../components/navigatebar/index",
-    "authenticationinfo": "../../reportercomponents/authenticationinfo/index",
     "personalbasicinfo": "../../reportercomponents/personalbasicinfo/index",
     "educationinfo": "../../reportercomponents/educationinfo/index",
-    "workinfo": "../../reportercomponents/workinfo/index"
+    "workinfo": "../../reportercomponents/workinfo/index",
+    "uploadfileinfo": "../../reportercomponents/uploadfileinfo/index"
   },
   "enablePullDownRefresh": false
 }

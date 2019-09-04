@@ -52,10 +52,29 @@ export const toHttps = (url) => {
   return null;
 };
 
-// module.exports = {
-//   formatTime,
-//   formatDate,
-//   formatDateChinese,
-
-//   formatImage,
-// };
+export const number2Chinese = section => {
+  const chnNumChar = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+  const chnUnitChar = ['', '十', '百', '千', '万', '亿', '万亿', '亿亿'];
+  let inValue = section;
+  let strIns = '';
+  let chnStr = '';
+  let unitPos = 0;
+  let zero = true;
+  while (inValue > 0) {
+    const v = inValue % 10;
+    if (v === 0) {
+      if (!zero) {
+        zero = true;
+        chnStr = chnNumChar[v] + chnStr;
+      }
+    } else {
+      zero = false;
+      strIns = chnNumChar[v];
+      strIns += chnUnitChar[unitPos];
+      chnStr = strIns + chnStr;
+    }
+    unitPos += 1;
+    inValue = Math.floor(inValue / 10);
+  }
+  return chnStr;
+};

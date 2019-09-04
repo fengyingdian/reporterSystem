@@ -1,0 +1,27 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  width: 100vw;
+  align-items: center;
+  background: #fff;
+}
+
+.item {
+  flex: 1;
+  height: 96rpx;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+
+.pre {
+  margin: 36rpx 15rpx 68rpx 32rpx;
+  border: 1px solid #999;
+  color: #999;
+}
+
+.next {
+  margin: 36rpx 32rpx 68rpx 16rpx;
+  background: #0159ab;
+  color: #fff;
+}

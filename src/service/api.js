@@ -16,8 +16,8 @@ export const HOST = (() => {
   return 'http://localhost:8800';
 })();
 
-const wxPromisify = wxCPSFunction => opts => new Promise((resolve, reject) => wxCPSFunction({
-  ...opts,
+const wxPromisify = wxCPSFunction => e => new Promise((resolve, reject) => wxCPSFunction({
+  ...e,
   success: (result) => {
     resolve(result);
   },

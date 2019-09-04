@@ -5,6 +5,6 @@
     "formswitch": "../formswitch/index",
     "formpicker": "../formpicker/index",
     "formdatepicker": "../formdatepicker/index",
-    "formitembutton": "../formitembutton/index"
+    "formdeleteexpriencebutton": "../formdeleteexpriencebutton/index"
   }
 }

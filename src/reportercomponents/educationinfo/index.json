@@ -4,7 +4,8 @@
     "formswitch": "../formswitch/index",
     "formpicker": "../formpicker/index",
     "forminput": "../forminput/index",
-    "formitembutton": "../formitembutton/index",
-    "educationexperience": "../educationexperience/index"
+    "formaddexpriencebutton": "../formaddexpriencebutton/index",
+    "educationexperience": "../educationexperience/index",
+    "registerbottombutton": "../registerbottombutton/index"
   }
 }

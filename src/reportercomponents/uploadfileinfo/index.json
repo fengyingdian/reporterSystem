@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "formuploadfile": "../formuploadfile/index",
+    "formuploadidcard": "../formuploadidcard/index",
+    "formuploadphoto": "../formuploadphoto/index",
+    "registerbottombutton": "../registerbottombutton/index"
+  },
+  "component": true
+}

@@ -1,0 +1,29 @@
+<button
+  class="col-start container"
+  style="{{status || filePath ? 'border:none' : ''}}"
+  >
+    <image
+      class="background"
+      mode="aspectFill"
+      src="{{filePath}}"
+      />
+    <view
+      wx:if="{{!status && !filePath}}"
+      class="add"
+      bind:tap="onAdd"
+      > {{name}} </view>
+    <view
+      wx:elif="{{status}}"
+      class="loading"
+      > 加载中... </view>
+    <view
+      wx:elif="{{!status && filePath}}"
+      class="delete col-center"
+      bind:tap="onDelete"
+      >
+      <image
+        style="width:100%;height:100%;"
+        src="/assets/icons/delete.png"
+        />
+    </view>
+  </button>

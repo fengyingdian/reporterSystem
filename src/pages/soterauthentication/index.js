@@ -1,8 +1,8 @@
 // const AUTH_MODE = ['fingerPrint', 'facial'];
 
 Page({
-  startAuth(opts) {
-    const { mode } = opts.currentTarget.dataset;
+  startAuth(e) {
+    const { mode } = e.currentTarget.dataset;
     const startSoterAuthentication = authmode => {
       wx.startSoterAuthentication({
         requestAuthModes: [authmode],

@@ -10,7 +10,11 @@ Component({
     },
     index: {
       type: Number,
-      value: 0,
+      value: -1,
+    },
+    isInited: {
+      type: Boolean,
+      value: false,
     },
     isNeeded: {
       type: Boolean,

@@ -5,6 +5,8 @@
     "formpicker": "../formpicker/index",
     "forminput": "../forminput/index",
     "formitembutton": "../formitembutton/index",
-    "workexperience": "../workexperience/index"
+    "workexperience": "../workexperience/index",
+    "formaddexpriencebutton": "../formaddexpriencebutton/index",
+    "registerbottombutton": "../registerbottombutton/index"
   }
 }

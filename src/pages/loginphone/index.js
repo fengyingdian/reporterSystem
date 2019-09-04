@@ -41,15 +41,15 @@ Page({
     }, 1000);
   },
 
-  onPhoneNumber(opts) {
+  onPhoneNumber(e) {
     this.setData({
-      phoneNumber: opts.detail.value,
+      phoneNumber: e.detail.value,
     });
   },
 
-  onVerifyCode(opts) {
+  onVerifyCode(e) {
     this.setData({
-      verifyCode: opts.detail.value,
+      verifyCode: e.detail.value,
     });
   },
 

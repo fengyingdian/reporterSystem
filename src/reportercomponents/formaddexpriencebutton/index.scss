@@ -1,0 +1,28 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  width: 100vw;
+  background: #fff;
+  align-items: center;
+}
+
+.item {
+  align-items: center;
+  width: 686rpx;
+  height: 144rpx;
+  margin: 32rpx;
+  border-radius: 10rpx;
+  border: 1px solid #0159ab;
+  color: #0159ab;
+}
+
+.title {
+  margin: 24rpx 0 4rpx;
+  font-size: 34rpx;
+  line-height: 48rpx;
+}
+
+.content {
+  font-size: 26rpx;
+  line-height: 36rpx;
+}

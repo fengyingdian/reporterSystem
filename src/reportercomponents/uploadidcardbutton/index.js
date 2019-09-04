@@ -6,6 +6,10 @@ Component({
       type: Number,
       value: 0,
     },
+    name: {
+      type: String,
+      value: '',
+    },
     filePath: {
       type: String,
       value: '',
@@ -19,7 +23,15 @@ Component({
   },
 
   methods: {
-    onTap() {
+    onDelete() {
+      const { index, filePath } = this.data;
+      this.triggerEvent('deletefile', {
+        index,
+        filePath,
+      });
+    },
+
+    onAdd() {
       if (this.data.status) {
         return;
       }
@@ -50,13 +62,13 @@ Component({
             title: '上传失败',
             icon: 'none',
           });
+          return '';
         });
-      if (filePath) {
-        that.triggerEvent('uploadfile', {
-          index: that.data.index,
-          filePath,
-        });
-      }
+
+      that.triggerEvent('uploadfile', {
+        index: that.data.index,
+        filePath,
+      });
 
       // await wxpromisify.uploadFile({
       //   url: 'http://localhost:8800/api/app/wechat/actions/id-card-info',

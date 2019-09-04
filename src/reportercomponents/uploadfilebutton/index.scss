@@ -1,0 +1,59 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  width: 160rpx;
+  max-width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  color: #fff;
+  border: 1px dashed #999;
+  margin: 0 32rpx 0 0;
+  border-radius: 10rpx
+}
+
+.background {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.loading {
+  position: relative;
+  left: 0;
+  bottom: 100%;
+  z-index: 2;
+  font-size: 28rpx;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  line-height: 160rpx;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.add {
+  position: relative;
+  left: 56rpx;
+  bottom: 104rpx;
+  z-index: 2;
+  width: 48rpx;
+  height: 48rpx;
+  min-height: 48rpx;
+}
+
+.delete {
+  align-items: center;
+  position: relative;
+  left: 112rpx;
+  bottom: 100%;
+  z-index: 2;
+  width: 48rpx;
+  height: 48rpx;
+  min-height: 48rpx;
+}

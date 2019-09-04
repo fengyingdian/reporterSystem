@@ -1,19 +1,19 @@
 <import src="../../common/wxml/common/index.wxml" />
 
 <view class="col-center form-item-container">
-  <view class="row-space-between form-item">
+  <view class="col-center form-item-double-line">
     <view class="row-start form-item-name-box">
-      <text class="form-item-name">{{name}}</text>
-      <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text>
+      <text class="form-item-name-double-line">{{name}}</text>
+      <!-- <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text> -->
     </view>
-    <view class="row-end form-item-value">
+    <view class="row-center form-item-value-double-line">
       <picker
         bindchange="onchange"
         mode="date"
         value="{{value}}"
         start="{{'1900-00-00'}}"
         end="{{'2100-00-00'}}">
-        <template is="form-item-more" data="{{value}}"/>
+        <template is="form-item-picker-value" data="{{ isInited,value }}"/>
       </picker>
     </view>
   </view>

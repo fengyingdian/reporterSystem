@@ -6,11 +6,15 @@ Component({
     },
     value: {
       type: String,
-      value: [],
+      value: '',
     },
     placeholder: {
       type: String,
       value: 0,
+    },
+    isInited: {
+      type: Boolean,
+      value: false,
     },
     isNeeded: {
       type: Boolean,
@@ -20,11 +24,15 @@ Component({
       type: Boolean,
       value: true,
     },
+    type: {
+      type: String,
+      value: 'text',
+    },
   },
 
   methods: {
-    onConfirm(e) {
-      this.triggerEvent('confirm', { value: e.detail.value });
+    onchange(e) {
+      this.triggerEvent('change', { value: e.detail.value });
     },
   },
 });

@@ -26,7 +26,10 @@
         />
     </view>
     <view class="col-center" style="margin:80rpx 0;align-items:center">
-      <loginbutton hasVerifyCode="{{verifyCode.length===4 && phoneNumber.length===11}}"/>
+      <loginbutton
+        hasVerifyCode="{{verifyCode.length===4 && phoneNumber.length===11}}"
+        bind:login="onLogin"
+        />
     </view>
   </view>
 </view>

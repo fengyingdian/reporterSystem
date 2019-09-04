@@ -1,0 +1,13 @@
+@import '../../common/scss/common.scss';
+
+.file-paths {
+  flex-wrap: wrap;
+}
+
+.uploadfile-container {
+  width: 100%;
+  margin: 12rpx 32rpx 12rpx 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}

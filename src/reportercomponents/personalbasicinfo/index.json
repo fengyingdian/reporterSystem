@@ -4,6 +4,7 @@
     "forminput": "../forminput/index",
     "formswitch": "../formswitch/index",
     "formpicker": "../formpicker/index",
-    "formdatepicker": "../formdatepicker/index"
+    "formdatepicker": "../formdatepicker/index",
+    "registernextbutton": "../registernextbutton/index"
   }
 }

@@ -39,12 +39,12 @@ Page({
     }, 1000);
   },
 
-  onIdCard(opts) {
-    console.log({ opts });
+  onIdCard(e) {
+    console.log({ e });
     this.setData({
-      id: opts.detail.id,
-      name: opts.detail.name,
-      addr: opts.detail.addr,
+      id: e.detail.id,
+      name: e.detail.name,
+      addr: e.detail.addr,
     });
   },
 

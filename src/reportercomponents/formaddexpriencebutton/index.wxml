@@ -1,0 +1,9 @@
+<view class="col-center container">
+  <button
+    class="col-start item"
+    bind:tap="onTap"
+    >
+    <text class="title"> {{title}} </text>
+    <text class="content"> {{content}} </text>
+  </button>
+</view>

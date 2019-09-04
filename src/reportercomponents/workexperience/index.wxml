@@ -1,36 +1,45 @@
 <import src="../../common/wxml/common/index.wxml" />
 
-<view class="col-start" style="margin: 24rpx 0 0 0">
-  <formdatepicker
-    name="起始日期"
-    value="{{startDate}}"
-    isShowSplit="{{true}}"
-    bind:change="onChangeStartDate"
-    />
-  <formdatepicker
-    name="结束日期"
-    value="{{endDate}}"
-    isShowSplit="{{true}}"
-    bind:change="onChangeEndDate"
-    />
+<view class="col-start">
+  <template
+    is="form-subtitle-level-2"
+    data="{{name: subTitle}}"/>
   <forminput
     name="工作单位"
-    value="{{schoolName}}"
-    placeholder="xxx"
+    value="{{employer.value}}"
+    placeholder="{{employer.placeholder}}"
+    isInited="{{employer.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm="onConfirmSchoolName"
+    data-name="employer"
+    bind:change="onChange"
     />
   <forminput
     name="担任职务"
-    value="{{specialization}}"
-    placeholder="xxx"
-    isShowSplit="{{false}}"
-    bind:confirm="onConfirmSpecialization"
+    value="{{duty.value}}"
+    placeholder="{{duty.placeholder}}"
+    isInited="{{duty.isInited}}"
+    isShowSplit="{{true}}"
+    data-name="duty"
+    bind:change="onChange"
     />
-  <formitembutton
-    tip="删除该条经历"
-    src="/assets/icons/minus.png"
-    background="#fee"
-    isShowSplit="{{false}}"
+  <formdatepicker
+    name="起始日期"
+    value="{{startDate.value}}"
+    isInited="{{startDate.isInited}}"
+    isShowSplit="{{true}}"
+    data-name="startDate"
+    bind:change="onChange"
+    />
+  <formdatepicker
+    name="结束日期"
+    value="{{endDate.value}}"
+    isInited="{{endDate.isInited}}"
+    isShowSplit="{{true}}"
+    data-name="endDate"
+    bind:change="onChange"
+    />
+  <formdeleteexpriencebutton
+    title="删除该条经历"
+    bind:delete="onDelete"
     />
 </view>

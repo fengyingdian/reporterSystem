@@ -1,60 +1,53 @@
+import { number2Chinese } from '../../utils/util';
+
 Component({
   properties: {
-    academicDegrees: {
-      type: Array,
-      value: ['学士', '硕士', '博士'],
-    },
-    academicDegreeType: {
+    index: {
       type: Number,
-      value: 0,
+      value: -1,
+      observer(val) {
+        const chineseIndex = number2Chinese(val + 1);
+        this.setData({
+          subTitle: `工作经历${chineseIndex}`,
+        });
+      },
+    },
+    timestamp: {
+      type: Number,
+      value: -1,
+    },
+    employer: {
+      type: Object,
+      value: {},
+    },
+    duty: {
+      type: Object,
+      value: {},
     },
     startDate: {
-      type: String,
-      value: '1989-06-15',
+      type: Object,
+      value: {},
     },
     endDate: {
-      type: String,
-      value: '1989-06-15',
-    },
-    schoolName: {
-      type: String,
-      value: '',
-    },
-    specialization: {
-      type: String,
-      value: '',
+      type: Object,
+      value: {},
     },
   },
 
   methods: {
-    onChangeAcademicDegreeType(e) {
-      this.setData({
-        academicDegreeType: e.detail.value,
+    onChange(e) {
+      const item = this.data[e.currentTarget.dataset.name];
+      item.value = e.detail.value;
+      item.isInited = true;
+      this.triggerEvent('change', {
+        timestamp: this.data.timestamp,
+        name: e.currentTarget.dataset.name,
+        item,
       });
     },
 
-    onChangeStartDate(e) {
-      this.setData({
-        startDate: e.detail.value,
-      });
-    },
-
-    onChangeEndDate(e) {
-      this.setData({
-        endDate: e.detail.value,
-      });
-    },
-
-    onConfirmSchoolName(e) {
-      this.setData({
-        schoolName: e.detail.value,
-      });
-    },
-
-    onConfirmSpecialization(e) {
-      this.setData({
-        specialization: e.detail.value,
-      });
+    onDelete() {
+      this.triggerEvent('delete', { timestamp: this.data.timestamp });
     },
   },
 });

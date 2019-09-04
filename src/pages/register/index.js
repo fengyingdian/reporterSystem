@@ -2,6 +2,7 @@ Page({
   data: {
     // attach loading page
     attachLoadingPage: true,
+
     // show loading page
     showLoadingPage: true,
 
@@ -9,7 +10,13 @@ Page({
     topMargin: wx.getSystemInfoSync().statusBarHeight + 44,
 
     // title
-    title: '注册',
+    title: '',
+
+    // page index
+    pageIndex: 0,
+
+    // page size
+    pageSize: 4,
   },
 
   onLoad() {
@@ -17,9 +24,9 @@ Page({
     this.init();
   },
 
-  onShow() {},
+  onShow() { },
 
-  onHide() {},
+  onHide() { },
 
   init() {
     const that = this;
@@ -35,10 +42,23 @@ Page({
     }, 1000);
   },
 
+  onPre() {
+    this.setData({
+      pageIndex: this.data.pageIndex > 0 ? this.data.pageIndex - 1 : 0,
+    });
+  },
 
-  onReachBottom() {},
+  onNext() {
+    this.setData({
+      pageIndex:
+      this.data.pageIndex < this.data.pageSize - 1
+        ? this.data.pageIndex + 1 : this.data.pageSize - 1,
+    });
+  },
 
-  onPageScroll() {},
+  onReachBottom() { },
 
-  onShareAppMessage() {},
+  onPageScroll() { },
+
+  onShareAppMessage() { },
 });

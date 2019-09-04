@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uploadphotobutton": "../uploadphotobutton/index"
+  },
+  "component": true
+}

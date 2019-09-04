@@ -2,18 +2,21 @@
 
 <view class="col-center form-item-container">
   <view class="col-start form-uploadfile-item">
-    <text class="form-item-name">{{name}}</text>
+    <template is="form-item-uploadfile-title" data="{{name, isInited, value: filePaths[0].filePath }}" />
     <view class="row-start uploadfile-container">
       <block
         wx:for="{{filePaths}}"
         wx:key="index"
         >
-        <uploadfile
+        <uploadfilebutton
           index="{{index}}"
-          filePath="{{item}}"
-          bind:uploadfile="onFilePath"
+          timestamp="{{item.timestamp}}"
+          filePath="{{item.filePath}}"
+          bind:uploadfile="onUploadFile"
+          bind:deletefile="onDeleteFile"
           />
       </block>
     </view>
   </view>
+  <view class="form-item-split" />
 </view>

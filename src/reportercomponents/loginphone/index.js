@@ -19,8 +19,8 @@ Component({
   },
 
   methods: {
-    onInput(opts) {
-      this.triggerEvent('input', { value: opts.detail.value });
+    onInput(e) {
+      this.triggerEvent('input', { value: e.detail.value });
     },
   },
 });

@@ -8,6 +8,10 @@ Component({
       type: String,
       value: '',
     },
+    isInited: {
+      type: Boolean,
+      value: false,
+    },
     isNeeded: {
       type: Boolean,
       value: true,

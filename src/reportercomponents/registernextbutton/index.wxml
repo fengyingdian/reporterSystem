@@ -1,0 +1,9 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="row-center container">
+  <button
+    class="item next"
+    bind:tap="onNext"
+    > 下一步 </button>
+</view>
+

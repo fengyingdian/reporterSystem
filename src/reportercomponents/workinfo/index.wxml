@@ -1,110 +1,70 @@
 <import src="../../common/wxml/common/index.wxml" />
 
-<view class="col-start">
+<view class="col-center">
    <template
-    is="form-subtitle"
-    data="{{name:'工作信息'}}"/>
+    is="form-subtitle-level-1"
+    data="{{name:'3/4 工作经历'}}"
+    />
 
   <forminput
     name="职务"
-    value="{{}}"
-    placeholder="xxxx"
+    value="{{duty.value}}"
+    placeholder="{{duty.placeholder}}"
+    isInited="{{duty.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    data-name="duty"
+    bind:change="onChange"
     />
   <forminput
     name="职称"
-    value="{{}}"
-    placeholder="xxxx"
+    value="{{jobTitle.value}}"
+    placeholder="{{jobTitle.placeholder}}"
+    isInited="{{jobTitle.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    data-name="jobTitle"
+    bind:change="onChange"
     />
   <forminput
     name="所在部门"
-    value="{{}}"
-    placeholder="xxxx"
+    value="{{department.value}}"
+    placeholder="{{department.placeholder}}"
+    isInited="{{department.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    data-name="department"
+    bind:change="onChange"
     />
   <forminput
     name="工作关系"
-    value="{{}}"
-    placeholder="xxxx"
+    value="{{jobRelationship.value}}"
+    placeholder="{{jobRelationship.placeholder}}"
+    isInited="{{jobRelationship.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    data-name="jobRelationship"
+    bind:change="onChange"
     />
-  <formswitch
-    name="是否固定期限"
-    value="{{isDispatched}}"
-    isShowSplit="{{true}}"
-    bind:change="onChangeDisPatched"
+  <block
+    wx:for="{{experiences}}"
+    wx:key="item.timestamp"
+    >
+    <workexperience
+      index="{{index}}"
+      timestamp="{{item.timestamp}}"
+      employer="{{item.employer}}"
+      duty="{{item.duty}}"
+      startDate="{{item.startDate}}"
+      endDate="{{item.endDate}}"
+      bind:delete="onDeleteExperience"
+      bind:change="onChangeExperience"
+      />
+  </block>
+  <formaddexpriencebutton
+    title="添加工作经历"
+    content="工作经历从最近工作开始添加，不包括当前工作"
+    bind:add="onAddExperience"
     />
-  <formdatepicker
-    name="聘用开始日期"
-    value="{{startDate}}"
-    isShowSplit="{{true}}"
-    bind:change="onChangeStartDate"
+  <registerbottombutton
+    bind:pre="onPre"
+    bind:next="onNext"
     />
-  <formdatepicker
-    name="聘用结束日期"
-    value="{{endDate}}"
-    isShowSplit="{{true}}"
-    bind:change="onChangeEndDate"
-    />
-  <forminput
-    name="单位座机电话"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="单位邮编"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="单位地址"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="单位传真"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="所属单位"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="审批单位"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <forminput
-    name="电子邮件"
-    value="{{}}"
-    placeholder="xxxx"
-    isShowSplit="{{true}}"
-    bind:confirm=""
-    />
-  <formitembutton
-    tip="添加工作经历"
-    src="/assets/icons/add.png"
-    background="#efe"
-    isShowSplit="{{false}}"
-    />
-  <workexperience />
 </view>
+

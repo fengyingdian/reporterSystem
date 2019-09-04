@@ -6,7 +6,7 @@ Component({
   methods: {
     onTap() {
       wx.navigateTo({
-        url: '/pages/registeruploadfile/index',
+        url: '/pages/register/index',
       });
     },
   },

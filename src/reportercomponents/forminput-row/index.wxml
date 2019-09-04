@@ -1,0 +1,18 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="row-space-between form-item">
+    <view class="row-start form-item-name-box">
+      <text class="form-item-name">{{name}}</text>
+      <text wx:if="{{isNeeded}}" class="form-item-name-is-needed">{{'*'}}</text>
+    </view>
+    <view class="row-end form-item-value">
+      <input
+        style="flex:1"
+        placeholder="{{placeholder}}"
+        value="{{value}}"
+        bindconfirm="onConfirm"/>
+    </view>
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

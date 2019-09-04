@@ -1,0 +1,18 @@
+@import '../../common/scss/common.scss';
+
+.container {
+  width: 100vw;
+  align-items: center;
+  background: #fff;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+  margin: 31rpx 32rpx 0;
+  border-radius: 10rpx;
+  border: 1px solid #bbb;
+  color: #bbb;
+}

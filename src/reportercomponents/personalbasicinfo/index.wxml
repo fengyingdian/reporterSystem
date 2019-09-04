@@ -2,83 +2,96 @@
 
 <view class="col-start">
    <template
-    is="form-subtitle"
-    data="{{name:'基本信息'}}"/>
+    is="form-subtitle-level-1"
+    data="{{name:'1/4 基本信息'}}"/>
 
-  <forminput
+  <!-- <forminput
     name="姓名"
     value="{{formalName}}"
     placeholder="xxx"
     isShowSplit="{{true}}"
     bind:confirm="onConfirmFormalName"
-    />
+    /> -->
   <formpicker
     name="性别"
-    array="{{genders}}"
-    index="{{genderType}}"
+    array="{{gender.array}}"
+    index="{{gender.value}}"
+    isInited="{{gender.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeGenderType"
+    bind:change="onChangeGender"
     />
   <forminput
     name="民族"
-    value="{{}}"
-    placeholder="xxx"
+    value="{{ethnic.value}}"
+    placeholder="{{ethnic.placeholder}}"
+    isInited="{{ethnic.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    bind:change="onChangeEthnic"
     />
   <forminput
     name="国籍"
-    value="{{}}"
-    placeholder="xxx"
+    value="{{nationality.value}}"
+    placeholder="{{nationality.placeholder}}"
+    isInited="{{nationality.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    bind:change="onChangeNationality"
     />
   <formpicker
     name="政治面貌"
-    array="{{politicalStatuss}}"
-    index="{{politicalStatusType}}"
+    array="{{politicalStatus.array}}"
+    index="{{politicalStatus.value}}"
+    isInited="{{politicalStatus.isInited}}"
     isShowSplit="{{true}}"
-    bind:change=""
+    bind:change="onChangePoliticalStatus"
     />
   <formdatepicker
     name="出生日期"
-    value="{{birthday}}"
+    value="{{birthday.value}}"
+    isInited="{{birthday.isInited}}"
     isShowSplit="{{true}}"
-    bind:change=""
+    bind:change="onChangeBirthday"
     />
   <formpicker
     name="所在省市"
-    array="{{residences}}"
-    index="{{residenceType}}"
+    array="{{residence.array}}"
+    index="{{residence.value}}"
+    isInited="{{residence.isInited}}"
     isShowSplit="{{true}}"
-    bind:change=""
+    bind:change="onChangeResidence"
     />
   <forminput
     name="法律文件送达地址"
-    value="{{}}"
-    placeholder="xxx"
+    value="{{deliveryAddress.value}}"
+    placeholder="{{deliveryAddress.placeholder}}"
+    isInited="{{deliveryAddress.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    bind:change="onChangeDeliveryAddress"
     />
   <forminput
     name="联系手机"
-    value="{{}}"
-    placeholder="xxx"
+    value="{{phoneNumber.value}}"
+    placeholder="{{phoneNumber.placeholder}}"
+    isInited="{{phoneNumber.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    type="{{'number'}}"
+    bind:change="onChangePhoneNumber"
     />
   <forminput
-    name="电子邮箱"
-    value="{{}}"
-    placeholder="xxx"
+    name="电子邮件"
+    value="{{email.value}}"
+    placeholder="{{email.placeholder}}"
+    isInited="{{email.isInited}}"
     isShowSplit="{{true}}"
-    bind:confirm=""
+    bind:change="onChangeEmail"
     />
   <formpicker
     name="户口所在地"
-    array="{{provinces}}"
-    index="{{provinceType}}"
-    isShowSplit="{{false}}"
-    bind:change=""
+    array="{{accountLocation.array}}"
+    index="{{accountLocation.value}}"
+    isInited="{{accountLocation.isInited}}"
+    isShowSplit="{{true}}"
+    bind:change="onChangeAccountLocation"
     />
+  <registernextbutton bind:next="onNext"/>
 </view>
+
