@@ -17,6 +17,25 @@ Page({
 
     // page size
     pageSize: 4,
+
+    // upload data
+    // personal basic info
+    personalBasicInfo: {
+      gender: '',
+      ethnic: '',
+      nationality: '',
+      politicalStatus: '',
+      birthday: '',
+      residence: '',
+      accountLocation: '',
+      deliveryAddress: '',
+      phoneNumber: '',
+      email: '',
+    },
+
+    // education info
+    educationInfo: [],
+
   },
 
   onLoad() {
@@ -48,11 +67,35 @@ Page({
     });
   },
 
-  onNext() {
+  onNext(e) {
+    const { pageIndex, pageSize } = this.data;
+    switch (pageIndex) {
+      case 0:
+        this.setData({
+          personalBasicInfo: {
+            ...e.detail,
+          },
+        });
+        break;
+      case 1:
+        this.setData({
+          educationInfo: e.detail.experiences,
+        });
+        break;
+      case 2:
+        this.setData({
+          workInfo: {
+            ...e.detail,
+          },
+        });
+        break;
+      default:
+        break;
+    }
     this.setData({
       pageIndex:
-      this.data.pageIndex < this.data.pageSize - 1
-        ? this.data.pageIndex + 1 : this.data.pageSize - 1,
+      pageIndex < pageSize - 1
+        ? pageIndex + 1 : pageSize - 1,
     });
   },
 

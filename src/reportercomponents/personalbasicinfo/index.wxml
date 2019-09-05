@@ -18,7 +18,8 @@
     index="{{gender.value}}"
     isInited="{{gender.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeGender"
+    data-name="gender"
+    bind:change="onChange"
     />
   <forminput
     name="民族"
@@ -26,7 +27,8 @@
     placeholder="{{ethnic.placeholder}}"
     isInited="{{ethnic.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeEthnic"
+    data-name="ethnic"
+    bind:change="onChange"
     />
   <forminput
     name="国籍"
@@ -34,7 +36,8 @@
     placeholder="{{nationality.placeholder}}"
     isInited="{{nationality.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeNationality"
+    data-name="nationality"
+    bind:change="onChange"
     />
   <formpicker
     name="政治面貌"
@@ -42,14 +45,16 @@
     index="{{politicalStatus.value}}"
     isInited="{{politicalStatus.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangePoliticalStatus"
+    data-name="politicalStatus"
+    bind:change="onChange"
     />
   <formdatepicker
     name="出生日期"
     value="{{birthday.value}}"
     isInited="{{birthday.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeBirthday"
+    data-name="birthday"
+    bind:change="onChange"
     />
   <formpicker
     name="所在省市"
@@ -57,7 +62,8 @@
     index="{{residence.value}}"
     isInited="{{residence.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeResidence"
+    data-name="residence"
+    bind:change="onChange"
     />
   <forminput
     name="法律文件送达地址"
@@ -65,7 +71,8 @@
     placeholder="{{deliveryAddress.placeholder}}"
     isInited="{{deliveryAddress.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeDeliveryAddress"
+    data-name="deliveryAddress"
+    bind:change="onChange"
     />
   <forminput
     name="联系手机"
@@ -74,7 +81,8 @@
     isInited="{{phoneNumber.isInited}}"
     isShowSplit="{{true}}"
     type="{{'number'}}"
-    bind:change="onChangePhoneNumber"
+    data-name="phoneNumber"
+    bind:change="onChange"
     />
   <forminput
     name="电子邮件"
@@ -82,7 +90,8 @@
     placeholder="{{email.placeholder}}"
     isInited="{{email.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeEmail"
+    data-name="email"
+    bind:change="onChange"
     />
   <formpicker
     name="户口所在地"
@@ -90,7 +99,8 @@
     index="{{accountLocation.value}}"
     isInited="{{accountLocation.isInited}}"
     isShowSplit="{{true}}"
-    bind:change="onChangeAccountLocation"
+    data-name="accountLocation"
+    bind:change="onChange"
     />
   <registernextbutton bind:next="onNext"/>
 </view>

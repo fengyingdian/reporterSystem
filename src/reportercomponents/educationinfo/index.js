@@ -80,7 +80,16 @@ Component({
     },
 
     onNext() {
-      this.triggerEvent('next');
+      const result = this.data.experiences.map(({
+        degree, major, school, startDate, endDate,
+      }) => ({
+        degree: degree.array[degree.value],
+        major,
+        school,
+        startDate,
+        endDate,
+      }));
+      this.triggerEvent('next', { experiences: result });
     },
   },
 });

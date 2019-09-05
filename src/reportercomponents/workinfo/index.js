@@ -113,7 +113,24 @@ Component({
     },
 
     onNext() {
-      this.triggerEvent('next');
+      const {
+        duty, jobTitle, department, jobRelationship, experiences,
+      } = this.data;
+      const result = experiences.map(({
+        employer, duty: exduty, startDate, endDate,
+      }) => ({
+        employer: employer.array[employer.value],
+        duty: exduty,
+        startDate,
+        endDate,
+      }));
+      this.triggerEvent('next', {
+        duty,
+        jobTitle,
+        department,
+        jobRelationship,
+        experiences: result,
+      });
     },
   },
 });
