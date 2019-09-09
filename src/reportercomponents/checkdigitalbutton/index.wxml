@@ -1,0 +1,5 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<button
+  class="container"
+  bind:tap="onTap"> 查看记者证电子版 </button>

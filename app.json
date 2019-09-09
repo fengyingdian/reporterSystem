@@ -2,7 +2,8 @@
   "pages": [
     "dist/pages/loginphone/index",
     "dist/pages/index/index",
-    "dist/pages/register/index"
+    "dist/pages/register/index",
+    "dist/pages/process/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

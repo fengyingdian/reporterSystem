@@ -1,10 +1,5 @@
 Component({
-  properties: {
-    hasVerifyCode: {
-      type: Boolean,
-      value: false,
-    },
-  },
+  properties: {},
 
   methods: {
     onTap() {

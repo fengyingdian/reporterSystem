@@ -1,5 +1,14 @@
 <import src="../../common/wxml/common/index.wxml" />
 
 <button
-  class="container"
-  bind:tap="onTap"> 办理过程查询 </button>
+  class="row-space-between card-container"
+  bind:tap="onTap">
+  <view class="row-start card-info">
+    <image class="icon" src="/assets/icons/process.png" />
+    <view class="col-center title-box">
+      <text class="title"> {{'办理进度查询'}} </text>
+      <text class="subtitle"> {{subtitle}} </text>
+    </view>
+  </view>
+  <image class="enter" src="/assets/icons/enter.png" />
+</button>

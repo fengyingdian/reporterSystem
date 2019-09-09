@@ -6,15 +6,19 @@ Component({
     },
     name: {
       type: String,
-      value: '',
+      value: '手机号',
     },
     maxlength: {
       type: Number,
-      value: 0,
+      value: 11,
     },
     placeholder: {
       type: String,
-      value: '',
+      value: '请输入手机号',
+    },
+    isShowTips: {
+      type: Boolean,
+      value: false,
     },
   },
 

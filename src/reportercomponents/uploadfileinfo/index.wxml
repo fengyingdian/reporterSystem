@@ -5,14 +5,70 @@
     is="form-subtitle-level-1"
     data="{{name:'4/4 上传附件'}}"
     />
-  <formuploadphoto name="{{'证件照'}}" />
-  <formuploadfile name="{{'领取新闻记者证人员情况'}}" />
-  <formuploadidcard name="{{'身份证'}}" />
-  <formuploadfile name="{{'毕业证或学位证'}}" />
-  <formuploadfile name="{{'培训合格证或免培证明'}}" />
-  <formuploadfile name="{{'劳动合同'}}" />
-  <formuploadfile name="{{'保密承诺书'}}" />
-  <formuploadfile name="{{'职业行为信息保密协议'}}" />
+  <formuploadphoto
+    filePaths="{{documentPhoto}}"
+    name="{{'证件照'}}"
+    isInited="{{isInited.documentPhoto}}"
+    data-name="{{'documentPhoto'}}"
+    bind:upload="onUploadDocumentPhoto"
+    bind:delete="onDeleteDocumentPhoto"
+    />
+  <formuploadidcard
+    name="{{'身份证'}}"
+    filePaths="{{idCard}}"
+    isInited="{{isInited.idCard}}"
+    data-name="{{'idCard'}}"
+    bind:upload="onUploadIdCard"
+    bind:delete="onDeleteIdCard"
+    />
+  <formuploadfile
+    name="{{'领取新闻记者证人员情况表'}}"
+    filePaths="{{personnelSitutionSheet}}"
+    isInited="{{isInited.personnelSitutionSheet}}"
+    data-name="{{'personnelSitutionSheet'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
+  <formuploadfile
+    name="{{'毕业证或学位证'}}"
+    filePaths="{{diploma}}"
+    isInited="{{isInited.diploma}}"
+    data-name="{{'diploma'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
+  <formuploadfile
+    name="{{'培训合格证或免培证明'}}"
+    filePaths="{{certificate}}"
+    isInited="{{isInited.certificate}}"
+    data-name="{{'certificate'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
+  <formuploadfile
+    name="{{'劳动合同'}}"
+    filePaths="{{laborContract}}"
+    isInited="{{isInited.laborContract}}"
+    data-name="{{'laborContract'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
+  <formuploadfile
+    name="{{'保密承诺书'}}"
+    filePaths="{{confidentialCommitment}}"
+    isInited="{{isInited.confidentialCommitment}}"
+    data-name="{{'confidentialCommitment'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
+  <formuploadfile
+    name="{{'职业行为信息保密协议'}}"
+    filePaths="{{confidentialAgreement}}"
+    isInited="{{isInited.confidentialAgreement}}"
+    data-name="{{'confidentialAgreement'}}"
+    bind:upload="onUploadFile"
+    bind:delete="onDeleteFile"
+    />
   <view style="height:32rpx;width:100vw"/>
   <registerbottombutton
     next="{{'完成'}}"

@@ -8,6 +8,24 @@ Component({
   lifetimes: {
     ready() {
       this.onAddExperience();
+      const value = wx.getStorageSync('educationInfo');
+      const data = JSON.parse(value);
+      this.setData({
+        ...data,
+      });
+    },
+    detached() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('educationInfo', data);
+    },
+  },
+
+  pageLifetimes: {
+    show() {
+    },
+    hide() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('educationInfo', data);
     },
   },
 
@@ -79,17 +97,63 @@ Component({
       this.triggerEvent('pre');
     },
 
+    checkData(data, that) {
+      const result = {
+        isValid: true,
+      };
+      // eslint-disable-next-line array-callback-return
+      Object.keys(data).map((key) => {
+        const item = data[key];
+        const itemType = Object.prototype.toString.call(item);
+        if (itemType === '[object Object]') {
+          const valueType = Object.prototype.toString.call(item.value);
+          if (!item.isInited) {
+            item.isInited = true;
+            result.isValid = false;
+          } else if (item.isInited && result.isValid) {
+            if (valueType === '[object String]' && !item.value) {
+              result.isValid = false;
+            } else if (valueType === '[object Number]' && item.value >= 0) {
+              result.isValid = false;
+            }
+          }
+        } else if (itemType === '[object Array]') {
+          // eslint-disable-next-line array-callback-return
+          item.map(element => {
+            result.isValid = that.checkData(element, that) && result.isValid;
+          });
+        }
+      });
+      return result.isValid;
+    },
+
+    verifyData() {
+      const result = this.checkData(this.data, this);
+      this.setData({
+        ...this.data,
+      });
+      return result;
+    },
+
     onNext() {
-      const result = this.data.experiences.map(({
-        degree, major, school, startDate, endDate,
-      }) => ({
-        degree: degree.array[degree.value],
-        major,
-        school,
-        startDate,
-        endDate,
-      }));
-      this.triggerEvent('next', { experiences: result });
+      if (this.verifyData()) {
+        const result = this.data.experiences.map(({
+          degree, major, school, startDate, endDate,
+        }) => ({
+          degree: degree.array[degree.value],
+          major: major.value,
+          school: school.value,
+          startDate: startDate.value,
+          endDate: endDate.value,
+        }));
+        this.triggerEvent('next', { experiences: result });
+      } else {
+        wx.showToast({
+          title: '尚有未完成的信息',
+          icon: 'none',
+          duration: 1500,
+        });
+      }
     },
   },
 });

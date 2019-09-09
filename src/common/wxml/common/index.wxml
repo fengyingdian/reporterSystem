@@ -16,6 +16,12 @@
   </view>
 </template>
 
+<template name="form-subtitle-level-3" >
+  <view class="form-subtitle-level-3-container">
+    <text class="form-subtitle-text-level-3"> {{name}} </text>
+  </view>
+</template>
+
 
 <template name="form-item-more">
   <view class="row-end" style="align-items:center">
@@ -72,6 +78,15 @@
   </view>
 </template>
 
+<template name="form-item-text-value">
+  <view
+    class="row-start"
+    style="align-items:center;width:686rpx;">
+    <text
+      style="width:100%;color:#666;font-size:32rpx;"> {{value}} </text>
+  </view>
+</template>
+
 <template name="form-item-uploadfile-title">
   <view
     wx:if="{{!value}}"
@@ -100,6 +115,73 @@
   </view>
 </template>
 
+<template name="form-status">
+  <view class="col-start" style="width:100%;">
+    <view class="row-start" style="margin: 31rpx 0 0 !important;width:100%">
+      <image
+        style="width:32rpx;height:32rpx;min-width:32rpx;margin:7rpx 24rpx 0 0;"
+        src="{{isPassed ? '/assets/icons/passed.png' : '/assets/icons/reject.png'}}" />
+      <view class="col-start" style="width:100%">
+        <text class="form-item-date-double-line">{{date}}</text>
+        <text class="form-item-info-double-line">{{info}}</text>
+        <text wx:if="{{tips}}" class="form-item-info-double-line">{{tips}}</text>
+        <view class="form-item-split" style="width:100%;margin:32rpx 0 0 0 !important;"/>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="form-status-grey">
+  <view class="col-start" style="width:100%;">
+    <view class="row-start" style="margin: 31rpx 0 0 !important;width:100%">
+      <image
+        style="width:32rpx;height:32rpx;min-width:32rpx;margin:6rpx 24rpx 0 0;"
+        src="{{isPassed ? '/assets/icons/passed_grey.png' : '/assets/icons/reject_grey.png'}}" />
+      <view class="col-start" style="width:100%">
+        <text class="form-item-date-grey-double-line">{{date}}</text>
+        <text class="form-item-info-grey-double-line">{{info}}</text>
+        <text wx:if="{{tips}}" class="form-item-info-grey-double-line">{{tips}}</text>
+        <view class="form-item-split" style="width:100%;margin:32rpx 0 0 0 !important;"/>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="page-header-1">
+  <view class="page-header">
+    <view class="page-header-title-container">
+      <text class="page-header-title"> {{title}} </text>
+      <text class="page-header-subtitle"> {{subtitle}} </text>
+    </view>
+  </view>
+</template>
+
+<template name="page-header-1">
+  <view class="col-end page-header">
+    <view class="col-start page-header-title-container">
+      <text class="page-header-title"> {{title}} </text>
+      <text class="page-header-subtitle"> {{subtitle}} </text>
+    </view>
+  </view>
+</template>
+
+<template name="page-header-2">
+  <view class="col-end page-header" style="height:410rpx">
+    <view class="col-start" style="margin: 0 32rpx 128rpx;">
+      <text class="page-header-title"> {{title}} </text>
+    </view>
+  </view>
+</template>
+
+<template name="page-header-3">
+  <view class="col-end page-header">
+    <view class="col-start page-header-title-container">
+      <text class="page-header-title"> {{title}} </text>
+      <text class="page-header-title"> {{subtitle}} </text>
+    </view>
+  </view>
+</template>
+
 <template name="company-info">
-  <text > {{company}} </text>
+  <text class="company-info"> {{'国家新闻出版广电总局'}} </text>
 </template>

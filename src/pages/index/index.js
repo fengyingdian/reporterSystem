@@ -5,7 +5,7 @@
  * Author: break (fengyingdian@126.com)
  */
 
-// import api from '../../service/api';
+const app = getApp();
 
 Page({
   data: {
@@ -17,21 +17,35 @@ Page({
 
     // user's employer
     employer: '人民日报社',
+
+    // pageIndex
+    pageIndex: 0,
+
+    // apply status
+    applyStatus: 3,
   },
 
   onLoad() {
     this.init();
   },
 
-  onShow() {},
+  onShow() { },
 
-  onHide() {},
+  onHide() { },
 
-  init() {},
+  init() {
+    const that = this;
+    console.log({ app });
+    app.resetPageIndexCallBack = (index) => {
+      that.setData({
+        pageIndex: index,
+      });
+    };
+  },
 
-  onReachBottom() {},
+  onReachBottom() { },
 
-  onPageScroll() {},
+  onPageScroll() { },
 
-  onShareAppMessage() {},
+  onShareAppMessage() { },
 });

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "formtext": "../formtext/index",
+    "formcheckfile": "../formcheckfile/index",
+    "registerbottombutton": "../registerbottombutton/index"
+  }
+}

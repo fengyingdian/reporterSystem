@@ -2,7 +2,7 @@
 
 <view class="col-start">
   <template
-    is="form-subtitle-level-2"
+    is="form-subtitle-level-3"
     data="{{name: subTitle}}"/>
   <forminput
     name="工作单位"

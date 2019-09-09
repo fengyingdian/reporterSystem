@@ -1,18 +1,29 @@
 <import src="../../common/wxml/common/index.wxml" />
 
-<view class="col-center form-item-container">
-  <view class="row-space-between form-item container">
-    <view class="row-start form-item-phone-number">
-      <input
-        style="flex:1"
-        type="number"
-        placeholder="{{placeholder}}"
-        class="input"
-        placeholder-class="input"
-        maxlength="{{maxlength}}"
-        value="{{value}}"
-        bindinput="onInput"/>
+<view class="col-center form-item-container" style="width:686rpx;">
+  <view class="col-center form-item-double-line" style="width:622rpx;">
+    <view class="row-start form-item-name-box">
+      <text class="form-item-name-double-line">{{name}}</text>
     </view>
-    <button class="form-item-name name"> {{name}} </button>
+    <view class="row-center form-item-value-double-line">
+        <view
+          class="row-space-between"
+          style="align-items:center;width:622rpx;">
+          <input
+            placeholder="{{placeholder}}"
+            value="{{value}}"
+            type="number"
+            style="flex:1"
+            placeholder-style="color:#bbb;font-size:32rpx;"
+            bind:input="onInput"
+            />
+          <view
+            wx:if="{{isShowTips}}"
+            style="color:#0f5aa5;font-size:34rpx;line-height:48rpx"
+            bind:tap="onGetVerifyCode"
+            > {{ '获取验证码' }} </view>
+        </view>
+    </view>
   </view>
+  <view class="form-item-split" style="width:622rpx;"/>
 </view>

@@ -1,5 +1,14 @@
 <import src="../../common/wxml/common/index.wxml" />
 
 <button
-  class="container"
-  bind:tap="onTap"> 记者证申请 </button>
+  class="row-space-between card-container"
+  bind:tap="onTap">
+  <view class="row-start card-info">
+    <image class="icon" src="/assets/icons/apply.png" />
+    <view class="col-center title-box">
+      <text class="title"> {{'记者证申请'}} </text>
+      <text class="subtitle"> {{pageDescription}} </text>
+    </view>
+  </view>
+  <image class="enter" src="/assets/icons/enter.png" />
+</button>

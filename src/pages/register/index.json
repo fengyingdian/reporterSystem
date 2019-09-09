@@ -4,7 +4,8 @@
     "personalbasicinfo": "../../reportercomponents/personalbasicinfo/index",
     "educationinfo": "../../reportercomponents/educationinfo/index",
     "workinfo": "../../reportercomponents/workinfo/index",
-    "uploadfileinfo": "../../reportercomponents/uploadfileinfo/index"
+    "uploadfileinfo": "../../reportercomponents/uploadfileinfo/index",
+    "registercheck": "../../reportercomponents/registercheck/index"
   },
   "enablePullDownRefresh": false
 }

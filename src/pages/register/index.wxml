@@ -26,4 +26,14 @@
       bind:next="onNext"
       />
   </view>
+  <view hidden="{{pageIndex !== 4}}">
+    <registercheck
+      personalBasicInfo="{{personalBasicInfo}}"
+      educationInfo="{{educationInfo}}"
+      workInfo="{{workInfo}}"
+      uploadFile="{{uploadFile}}"
+      bind:pre="onPre"
+      bind:next="onNext"
+      />
+  </view>
 </view>

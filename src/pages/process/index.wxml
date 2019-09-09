@@ -1,0 +1,45 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<navigatebar home="{{false}}" status="{{1}}" title=""/>
+
+<view class="col-center container">
+  <template is="page-header-2" data="{{title}}" />
+</view>
+
+<view class="col-start information-page">
+  <view
+    class="col-start infomation-container"
+    style="{{status !== 2 ? 'padding: 57rpx 40rpx 64rpx 32rpx;' : ''}}"
+    >
+    <view
+      wx:if="{{status === 0}}"
+      class="col-center information-list" style="align-items:center;">
+      <text style="font-size:34rpx;color:#999;"> {{'请提交申请后查看'}} </text>
+    </view>
+    <scroll-view
+      scroll-y="{{true}}"
+      wx:else
+      class="col-start information-list">
+      <block
+        wx:for="{{statusFeed}}"
+        wx:key="{{index}}"
+        >
+        <template
+          wx:if="{{index === 0}}"
+          is='form-status'
+          data="{{...item}}"
+          />
+        <template
+          wx:else
+          is='form-status-grey'
+          data="{{...item}}"
+          />
+      </block>
+    </scroll-view>
+    <checkdigitalbutton
+      wx:if="{{status === 2}}"
+      bind:checkdigital="onCheckDigital"
+      />
+  </view>
+  <text class="bottom-company-info"> {{'国家新闻出版广电总局'}} </text>
+</view>

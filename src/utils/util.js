@@ -78,3 +78,37 @@ export const number2Chinese = section => {
   }
   return chnStr;
 };
+
+export const getPageIndexDescription = index => {
+  switch (index) {
+    case 0:
+      return '1/4 基本信息';
+    case 1:
+      return '2/4 教育经历';
+    case 2:
+      return '3/4 工作经历';
+    case 3:
+      return '4/4 上传附件';
+    case 4:
+      return '信息和材料确认';
+    default:
+      break;
+  }
+  return '未知错误';
+};
+
+export const getApplyStatusDescription = status => {
+  switch (status) {
+    case 0:
+      return '未提交申请';
+    case 1:
+      return '申请审核中';
+    case 2:
+      return '申请成功';
+    case 3:
+      return '申请失败';
+    default:
+      break;
+  }
+  return '未知错误';
+};

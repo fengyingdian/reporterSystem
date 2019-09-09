@@ -1,0 +1,19 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="col-start form-uploadfile-item">
+    <template is="form-item-uploadfile-title" data="{{name, isInited: false}}" />
+    <view class="row-start uploadfile-container">
+      <block
+        wx:for="{{filePaths}}"
+        wx:key="index"
+        >
+        <formfile
+          type="{{type}}"
+          filePath="{{item.filePath}}"
+          />
+      </block>
+    </view>
+  </view>
+  <view class="form-item-split" />
+</view>

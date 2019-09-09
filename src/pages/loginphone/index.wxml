@@ -2,34 +2,30 @@
 
 <loadingpage wx:if="{{attachLoadingPage}}" show="{{showLoadingPage}}"/>
 
-<topbar title="{{title}}"/>
-
-<view style="col-center container">
-  <view style="width:100vw;height:{{topMargin}}px" />
-  <view class="col-center" style="align-items:center">
-    <view style="margin:48rpx;">
-      <userinfo/>
-    </view>
-    <view style="margin:24rpx;">
+<view class="col-center container">
+  <template is="page-header-3" data="{{title: '中国新闻记者证', subtitle: '申报系统'}}" />
+  <view class="col-center login-container">
+    <view class="col-center" style="margin: 57rpx 0 0">
       <loginphone
-        placeholder="请输入手机号"
+        name="{{'手机号'}}"
         value="{{phoneNumber}}"
-        name="获取验证码"
+        placeholder="{{'请输入手机号'}}"
+        isShowTips="{{true}}"
         maxlength="{{11}}"
         bind:input="onPhoneNumber"
         />
       <loginphone
-        placeholder="请输入验证码"
+        name="{{'验证码'}}"
         value="{{verifyCode}}"
+        placeholder="{{'请输入验证码'}}"
         maxlength="{{4}}"
         bind:input="onVerifyCode"
         />
     </view>
-    <view class="col-center" style="margin:80rpx 0;align-items:center">
-      <loginbutton
-        hasVerifyCode="{{verifyCode.length===4 && phoneNumber.length===11}}"
-        bind:login="onLogin"
-        />
-    </view>
+    <loginbutton
+      hasVerifyCode="{{verifyCode.length===4 && phoneNumber.length===11}}"
+      bind:login="onLogin"
+      />
   </view>
+  <template is="company-info" />
 </view>

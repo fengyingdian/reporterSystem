@@ -16,7 +16,7 @@ Page({
     pageIndex: 0,
 
     // page size
-    pageSize: 4,
+    pageSize: 5,
 
     // upload data
     // personal basic info
@@ -36,18 +36,48 @@ Page({
     // education info
     educationInfo: [],
 
+    // work info
+    workInfo: {
+      duty: '',
+      jobTitle: '',
+      department: '',
+      jobRelationship: '',
+      experiences: [],
+    },
+
+    // upload file
+    uploadFile: {
+      documentPhoto: [],
+      idCard: [],
+      personnelSitutionSheet: [],
+      diploma: [],
+      certificate: [],
+      laborContract: [],
+      confidentialCommitment: [],
+      confidentialAgreement: [],
+    },
   },
 
-  onLoad() {
+  onLoad(opts) {
     // then you can do other things
-    this.init();
+    this.init(opts);
   },
 
   onShow() { },
 
-  onHide() { },
+  onHide() {
+    if (getApp().resetPageIndexCallBack) {
+      getApp().resetPageIndexCallBack(this.data.pageIndex);
+    }
+  },
 
-  init() {
+  onUnload() {
+    if (getApp().resetPageIndexCallBack) {
+      getApp().resetPageIndexCallBack(this.data.pageIndex);
+    }
+  },
+
+  init(opts) {
     const that = this;
     setTimeout(() => {
       that.setData({
@@ -59,6 +89,9 @@ Page({
         });
       }, 1000);
     }, 1000);
+    that.setData({
+      pageIndex: parseInt(opts.pageIndex, 10),
+    });
   },
 
   onPre() {
@@ -89,13 +122,22 @@ Page({
           },
         });
         break;
+      case 3:
+        this.setData({
+          uploadFile: {
+            ...e.detail,
+          },
+        });
+        break;
+      case 4:
+        break;
       default:
         break;
     }
     this.setData({
       pageIndex:
-      pageIndex < pageSize - 1
-        ? pageIndex + 1 : pageSize - 1,
+        pageIndex < pageSize - 1
+          ? pageIndex + 1 : pageSize - 1,
     });
   },
 

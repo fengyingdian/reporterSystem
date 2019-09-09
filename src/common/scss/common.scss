@@ -6,6 +6,14 @@
   align-items: flex-start;
 }
 
+.col-reverse-start
+{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .col-center
 {
   display: flex;
@@ -42,6 +50,14 @@
 {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.row-reverse-start
+{
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -139,6 +155,36 @@
   margin: 8rpx 0 32rpx;
 }
 
+.form-item-date-double-line {
+  color: #444;
+  font-size: 34rpx;
+  line-height: 48rpx !important;
+}
+
+.form-item-info-double-line {
+  color: #444;
+  font-size: 34rpx;
+  line-height: 48rpx !important;
+  margin: 8rpx 0 0;
+}
+
+.form-item-date-grey-double-line {
+  align-items: center;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 40rpx !important;
+  width: 100%;
+}
+
+.form-item-info-grey-double-line {
+  align-items: center;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 40rpx !important;
+  width: 100%;
+  margin: 8rpx 0 0;
+}
+
 .form-button {
   margin: 0 32rpx;
   height: 80rpx;
@@ -153,7 +199,7 @@
 .form-item-name {
   color: #444;
   font-size: 32rpx;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .form-item-icon {
@@ -218,12 +264,26 @@
 
 .form-subtitle-level-2-container {
   width: 100vw;
+  height: 66rpx;
+  line-height: 66rpx;
+  margin: 16rpx 0 9rpx;
+}
+
+.form-subtitle-text-level-2 {
+  color: #444;
+  font-size: 48rpx;
+  font-weight: 500;
+  padding: 0 0 0 32rpx;
+}
+
+.form-subtitle-level-3-container {
+  width: 100vw;
   height: 48rpx;
   line-height: 48rpx;
   margin: 31rpx 0 0;
 }
 
-.form-subtitle-text-level-2 {
+.form-subtitle-text-level-3 {
   color: #444;
   font-size: 34rpx;
   font-weight: 500;
@@ -250,7 +310,10 @@
 }
 
 .company-info {
-  font-size: 28rpx;
+  position: fixed;
+  bottom: 64rpx;
+  font-size: 26rpx;
+  line-height: 36rpx;
   color: #999;
   text-align: center;
 }
@@ -265,5 +328,71 @@
 .form-uploadfile-item {
   margin: 31rpx 32rpx 40rpx;
   width: 686rpx;
+}
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 466rpx;
+  background: #0f5aa5;
+  color: #fff;
+}
+
+.page-header-title-container {
+  margin: 0 32rpx 128rpx;
+}
+
+.page-header-title {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 64rpx;
+  font-weight: 500;
+}
+
+.page-header-subtitle {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 28rpx;
+}
+
+.card-container {
+  width: 686rpx;
+  padding: 32rpx;
+  height: 272rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  box-shadow: 0 0 40rpx rgba(0, 0, 0, 0.1);
+  background: #fff;
+  align-items: center;
+  .card-info {
+    align-items: center;
+    .icon {
+      width: 160rpx;
+      min-width: 160rpx;
+      height: 160rpx;
+    }
+    .title-box {
+      margin: 0 0 0 32rpx;
+      .title {
+        color: #444;
+        line-height: 48rpx;
+        font-size: 34rpx;
+        font-weight: 500;
+      }
+      .subtitle {
+        line-height: 40rpx;
+        margin: 8rpx 0 0 0;
+        color: #999;
+        font-size: 28rpx;
+      }
+    }
+  }
+  .enter {
+    width: 16rpx;
+    min-width: 16rpx;
+    height: 28rpx;
+  }
 }
 

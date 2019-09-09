@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "formfile": "../formfile/index"
+  },
+  "component": true
+}

@@ -37,6 +37,24 @@ Component({
   lifetimes: {
     ready() {
       this.onAddExperience();
+      const value = wx.getStorageSync('workInfo');
+      const data = JSON.parse(value);
+      this.setData({
+        ...data,
+      });
+    },
+    detached() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('workInfo', data);
+    },
+  },
+
+  pageLifetimes: {
+    show() {
+    },
+    hide() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('workInfo', data);
     },
   },
 
@@ -112,25 +130,71 @@ Component({
       this.triggerEvent('pre');
     },
 
-    onNext() {
-      const {
-        duty, jobTitle, department, jobRelationship, experiences,
-      } = this.data;
-      const result = experiences.map(({
-        employer, duty: exduty, startDate, endDate,
-      }) => ({
-        employer: employer.array[employer.value],
-        duty: exduty,
-        startDate,
-        endDate,
-      }));
-      this.triggerEvent('next', {
-        duty,
-        jobTitle,
-        department,
-        jobRelationship,
-        experiences: result,
+    checkData(data, that) {
+      const result = {
+        isValid: true,
+      };
+      // eslint-disable-next-line array-callback-return
+      Object.keys(data).map((key) => {
+        const item = data[key];
+        const itemType = Object.prototype.toString.call(item);
+        if (itemType === '[object Object]') {
+          const valueType = Object.prototype.toString.call(item.value);
+          if (!item.isInited) {
+            item.isInited = true;
+            result.isValid = false;
+          } else if (item.isInited && result.isValid) {
+            if (valueType === '[object String]' && !item.value) {
+              result.isValid = false;
+            } else if (valueType === '[object Number]' && item.value >= 0) {
+              result.isValid = false;
+            }
+          }
+        } else if (itemType === '[object Array]') {
+          // eslint-disable-next-line array-callback-return
+          item.map(element => {
+            result.isValid = that.checkData(element, that) && result.isValid;
+          });
+        }
       });
+      return result.isValid;
+    },
+
+    verifyData() {
+      const result = this.checkData(this.data, this);
+      this.setData({
+        ...this.data,
+      });
+      return result;
+    },
+
+    onNext() {
+      if (this.verifyData()) {
+        const {
+          duty, jobTitle, department, jobRelationship, experiences,
+        } = this.data;
+        const result = experiences.map(({
+          employer, duty: exduty, startDate, endDate,
+        }) => ({
+          employer: employer.value,
+          duty: exduty.value,
+          startDate: startDate.value,
+          endDate: endDate.value,
+        }));
+        this.triggerEvent('next', {
+          duty: duty.value,
+          jobTitle: jobTitle.value,
+          department: department.value,
+          jobRelationship: jobRelationship.value,
+          experiences: result,
+        });
+      } else {
+        wx.showToast({
+          title: '尚有未完成的信息',
+          icon: 'none',
+          duration: 1500,
+        });
+      }
     },
   },
 });

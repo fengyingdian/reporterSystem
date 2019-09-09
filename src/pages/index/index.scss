@@ -1,25 +1,13 @@
 @import '../../common/scss/common.scss';
 
-.split-line {
-  width: 526rpx;
-  height: 1px;
-  margin: 32rpx;
-  background: #eee;
-}
-
-.userinfo-container {
-  box-shadow: 0 0 12rpx #eee;
-  border-radius: 20rpx;
-  margin: 32rpx 0 68rpx 0;
-  padding: 32rpx;
-  width: 622rpx;
-}
-
-.operation-container {
-  margin: 32rpx 0;
-}
-
-.brand-container {
+.apply-container {
   position: fixed;
-  bottom: 20rpx;
+  top: 387rpx;
 }
+
+.process-container {
+  position: fixed;
+  top: 690rpx;
+}
+
+

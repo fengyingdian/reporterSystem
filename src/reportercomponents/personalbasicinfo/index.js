@@ -81,6 +81,29 @@ Component({
     },
   },
 
+  lifetimes: {
+    ready() {
+      const value = wx.getStorageSync('personalBasicInfo');
+      const data = JSON.parse(value);
+      this.setData({
+        ...data,
+      });
+    },
+    detached() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('personalBasicInfo', data);
+    },
+  },
+
+  pageLifetimes: {
+    show() {
+    },
+    hide() {
+      const data = JSON.stringify(this.data);
+      wx.setStorageSync('personalBasicInfo', data);
+    },
+  },
+
   methods: {
     onChange(e) {
       const item = this.data[e.currentTarget.dataset.name];
@@ -92,24 +115,26 @@ Component({
     },
 
     verifyData() {
-      // const that = this;
-      // const result = {
-      //   isValid: true,
-      // };
-      // // eslint-disable-next-line array-callback-return
-      // Object.keys(that.data).map((key) => {
-      //   if (!that.data[key].isInited) {
-      //     that.setData({
-      //       [`${key}.isInited`]: true,
-      //     });
-      //     result.isValid = false;
-      //   } else if (that.data[key].isInited && !that.data[key].value && result.isValid) {
-      //     result.isValid = false;
-      //   }
-      // });
-
-      // return result.isValid;
-      return true;
+      const that = this;
+      const result = {
+        isValid: true,
+      };
+      // eslint-disable-next-line array-callback-return
+      Object.keys(that.data).map((key) => {
+        if (!that.data[key].isInited) {
+          that.setData({
+            [`${key}.isInited`]: true,
+          });
+          result.isValid = false;
+        } else if (that.data[key].isInited && result.isValid) {
+          if (Object.prototype.toString.call(that.data[key].value) === '[object String]' && !that.data[key].value) {
+            result.isValid = false;
+          } else if (Object.prototype.toString.call(that.data[key].value) === '[object Number]' && that.data[key].value >= 0) {
+            result.isValid = false;
+          }
+        }
+      });
+      return result.isValid;
     },
 
     onNext() {
@@ -126,6 +151,7 @@ Component({
           phoneNumber,
           email,
         } = this.data;
+
         this.triggerEvent('next', {
           gender: gender.array[gender.value],
           ethnic: ethnic.value,

@@ -2,7 +2,7 @@
 
 <view class="col-start">
   <template
-    is="form-subtitle-level-2"
+    is="form-subtitle-level-3"
     data="{{name: subTitle}}"/>
   <formpicker
     name="学历/学位"

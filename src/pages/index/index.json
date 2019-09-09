@@ -1,7 +1,5 @@
 {
   "usingComponents": {
-    "topbar": "../../components/topbar/index",
-    "userinfo": "../../reportercomponents/userinfo/index",
     "registerbutton": "../../reportercomponents/registerbutton/index",
     "processbutton": "../../reportercomponents/processbutton/index"
   },

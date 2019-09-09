@@ -1,5 +1,5 @@
 <import src="../../common/wxml/common/index.wxml" />
 
 <button
-  class="container {{hasVerifyCode ? 'has-verify-code' : 'no-verify-code' }}"
+  class="container"
   bind:tap="onTap"> 登录 </button>

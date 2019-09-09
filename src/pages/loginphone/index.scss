@@ -2,5 +2,17 @@
 
 .container {
   align-items: center;
-  width: 654rpx;
+}
+
+.login-container {
+  position: fixed;
+  top: 387rpx;
+  align-items: center;
+  width: 622rpx;
+  padding: 57rpx 32rpx 0;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  box-shadow: 0 0 40rpx rgba(0, 0, 0, 0.1);
+  background: #fff;
+  align-items: center;
 }

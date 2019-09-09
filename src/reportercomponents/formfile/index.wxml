@@ -1,0 +1,11 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view
+  class="col-start container {{type}}"
+  >
+  <image
+    class="background"
+    mode="aspectFill"
+    src="{{filePath}}"
+    />
+</view>

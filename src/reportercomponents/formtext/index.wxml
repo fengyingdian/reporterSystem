@@ -1,0 +1,13 @@
+<import src="../../common/wxml/common/index.wxml" />
+
+<view class="col-center form-item-container">
+  <view class="col-center form-item-double-line">
+    <view class="row-start form-item-name-box">
+      <text class="form-item-name-double-line">{{name}}</text>
+    </view>
+    <view class="row-center form-item-value-double-line">
+      <template is="form-item-text-value" data="{{value}}"/>
+    </view>
+  </view>
+  <view wx:if="{{isShowSplit}}" class="form-item-split" />
+</view>

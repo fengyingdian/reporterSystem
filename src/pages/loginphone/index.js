@@ -1,7 +1,7 @@
 Page({
   data: {
     // attach loading page
-    attachLoadingPage: true,
+    attachLoadingPage: false,
 
     // show loading page
     showLoadingPage: true,
@@ -54,11 +54,14 @@ Page({
   },
 
   onLogin() {
-    if (this.verifyData()) {
-      wx.redirectTo({
-        url: '/pages/index/index',
-      });
-    }
+    // if (this.verifyData()) {
+    //   wx.redirectTo({
+    //     url: '/pages/index/index',
+    //   });
+    // }
+    wx.redirectTo({
+      url: '/pages/index/index',
+    });
   },
 
   verifyData() {

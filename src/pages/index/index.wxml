@@ -1,20 +1,12 @@
-<topbar />
+<import src="../../common/wxml/common/index.wxml" />
 
 <view class="col-center" style="align-items:center;">
-  <view style="width:100vw:;height:{{topMargin}}px" />
-  <view class="userinfo-container">
-    <userinfo
-      name="{{name}}"
-      employer="{{employer}}"
-      isShowMoreInfo="{{true}}"/>
+  <template is="page-header-1" data="{{title: name, subtitle: employer}}" />
+  <view class="apply-container">
+    <registerbutton pageIndex="{{pageIndex}}" />
   </view>
-  <view class="operation-container">
-    <registerbutton />
+  <view class="process-container">
+    <processbutton status="{{applyStatus}}" />
   </view>
-  <view class="operation-container">
-    <processbutton />
-  </view>
-  <view class="brand-container">
-    <text class="company-info"> {{'国家新闻出版广电总局'}} </text>
-  </view>
+  <template is="company-info" />
 </view>

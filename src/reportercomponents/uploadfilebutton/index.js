@@ -65,10 +65,12 @@ Component({
           return '';
         });
 
-      that.triggerEvent('uploadfile', {
-        index: that.data.index,
-        filePath,
-      });
+      if (filePath) {
+        that.triggerEvent('uploadfile', {
+          index: that.data.index,
+          filePath,
+        });
+      }
 
       // await wxpromisify.uploadFile({
       //   url: 'http://localhost:8800/api/app/wechat/actions/id-card-info',
