@@ -98,6 +98,10 @@ Page({
     this.setData({
       pageIndex: this.data.pageIndex > 0 ? this.data.pageIndex - 1 : 0,
     });
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300,
+    });
   },
 
   onNext(e) {
@@ -134,6 +138,10 @@ Page({
       default:
         break;
     }
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300,
+    });
     this.setData({
       pageIndex:
         pageIndex < pageSize - 1

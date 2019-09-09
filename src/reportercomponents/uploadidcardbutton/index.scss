@@ -52,9 +52,9 @@
 }
 
 .delete {
+  align-self: flex-end;
   align-items: center;
   position: relative;
-  left: 206rpx;
   bottom: 100%;
   z-index: 2;
   width: 48rpx;
