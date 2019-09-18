@@ -63,18 +63,22 @@ Page({
     this.init(opts);
   },
 
-  onShow() { },
-
-  onHide() {
-    if (getApp().resetPageIndexCallBack) {
-      getApp().resetPageIndexCallBack(this.data.pageIndex);
+  onShow() {
+    const value = wx.getStorageSync('register');
+    if (value) {
+      const data = JSON.parse(value);
+      this.setData({
+        ...data,
+      });
     }
   },
 
+  onHide() {
+    this.quit();
+  },
+
   onUnload() {
-    if (getApp().resetPageIndexCallBack) {
-      getApp().resetPageIndexCallBack(this.data.pageIndex);
-    }
+    this.quit();
   },
 
   init(opts) {
@@ -92,6 +96,22 @@ Page({
     that.setData({
       pageIndex: parseInt(opts.pageIndex, 10),
     });
+  },
+
+  quit() {
+    if (getApp().resetPageIndexCallBack) {
+      getApp().resetPageIndexCallBack(this.data.pageIndex);
+    }
+    const {
+      personalBasicInfo, educationInfo, workInfo, uploadFile,
+    } = this.data;
+    const data = JSON.stringify({
+      personalBasicInfo,
+      educationInfo,
+      workInfo,
+      uploadFile,
+    });
+    wx.setStorageSync('register', data);
   },
 
   onPre() {
@@ -134,6 +154,9 @@ Page({
         });
         break;
       case 4:
+        wx.navigateBack({
+          delta: 1,
+        });
         break;
       default:
         break;

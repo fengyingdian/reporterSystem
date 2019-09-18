@@ -38,10 +38,12 @@ Component({
     ready() {
       this.onAddExperience();
       const value = wx.getStorageSync('workInfo');
-      const data = JSON.parse(value);
-      this.setData({
-        ...data,
-      });
+      if (value) {
+        const data = JSON.parse(value);
+        this.setData({
+          ...data,
+        });
+      }
     },
     detached() {
       const data = JSON.stringify(this.data);

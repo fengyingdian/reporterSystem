@@ -39,12 +39,18 @@
 
 .add {
   position: relative;
-  left: 56rpx;
-  bottom: 104rpx;
+  left: 0;
+  top: -160rpx;
   z-index: 2;
-  width: 48rpx;
-  height: 48rpx;
-  min-height: 48rpx;
+  width: 160rpx;
+  height: 160rpx;
+  min-height: 160rpx;
+  align-items: center;
+  .add-icon {
+    width: 48rpx;
+    height: 48rpx;
+    min-height: 48rpx;
+  }
 }
 
 .delete {

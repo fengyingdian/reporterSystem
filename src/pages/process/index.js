@@ -20,7 +20,7 @@ Component({
       {
         date: '201X年XX月XX日',
         info: '国家新闻出版广电总局 ',
-        tips: '照片不太好看',
+        tips: '照片格式不正确',
         isPassed: false,
       },
       {

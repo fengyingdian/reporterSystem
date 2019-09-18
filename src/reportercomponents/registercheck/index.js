@@ -33,18 +33,14 @@ Component({
         confirmColor: '#0f5aa5',
         confirmText: '返回修改',
         success: (res) => {
-          if (res.confirm) {
+          if (res.cancel) {
             wx.showToast({
-              title: '返回修改',
+              title: '提交成功',
             });
-          } else if (res.cancel) {
-            wx.showToast({
-              title: '继续提交',
-            });
+            this.triggerEvent('next');
           }
         },
       });
-      this.triggerEvent('next');
     },
   },
 });

@@ -84,10 +84,12 @@ Component({
   lifetimes: {
     ready() {
       const value = wx.getStorageSync('personalBasicInfo');
-      const data = JSON.parse(value);
-      this.setData({
-        ...data,
-      });
+      if (value) {
+        const data = JSON.parse(value);
+        this.setData({
+          ...data,
+        });
+      }
     },
     detached() {
       const data = JSON.stringify(this.data);

@@ -13,7 +13,7 @@
       bind:tap="onAdd"
       >
       <image
-        style="width:100%;height:100%;"
+        class="add-icon"
         src="/assets/icons/add.png"
         />
     </view>

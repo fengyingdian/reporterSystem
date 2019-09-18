@@ -145,7 +145,7 @@
   <formcheckfile
     filePaths="{{uploadFile.idCard}}"
     name="{{'身份证'}}"
-    type="{{'idCard'}}"
+    type="{{'idcard'}}"
     />
   <formcheckfile
     filePaths="{{uploadFile.personnelSitutionSheet}}"
